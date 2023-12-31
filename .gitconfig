@@ -1,0 +1,13 @@
+[user]
+	name = Milo Schwartz
+	email = mschwartz10612@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDvb4tTaSSq2DNyadaVuph0On7wIQUPAKZmNCcvVv0L1
+[init]
+	default = branch
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
