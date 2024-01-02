@@ -10,21 +10,14 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
-end)
-
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -45,7 +38,7 @@ vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/the
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
-vim.cmd("so")
+    vim.cmd("so")
 end)
 
 vim.keymap.set("n", "<leader>t", function()
@@ -53,3 +46,26 @@ vim.keymap.set("n", "<leader>t", function()
     vim.cmd("terminal")
     vim.cmd("startinsert")
 end)
+
+local cmp = require('cmp')
+cmp.setup({
+    mapping = cmp.mapping.preset.insert({
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    })
+})
+
+-- Normal mode: Delete without affecting the yank buffer
+vim.keymap.set('n', 'd', '"_d', { noremap = true, silent = true })
+vim.keymap.set('n', 'D', '"_D', { noremap = true, silent = true })
+vim.keymap.set('n', 'dd', '"_dd', { noremap = true, silent = true })
+
+-- Visual mode: Delete without affecting the yank buffer
+vim.keymap.set('v', 'd', '"_d', { noremap = true, silent = true })
+vim.keymap.set('v', 'D', '"_D', { noremap = true, silent = true })
+vim.keymap.set('v', 'x', '"_x', { noremap = true, silent = true })
+
+-- Optional: Remap other delete commands as needed in normal mode
+vim.keymap.set('n', 'dw', '"_dw', { noremap = true, silent = true })
+vim.keymap.set('n', 'db', '"_db', { noremap = true, silent = true })
+vim.keymap.set('n', 'd$', '"_d$', { noremap = true, silent = true })
+vim.keymap.set('n', 'd^', '"_d^', { noremap = true, silent = true })
