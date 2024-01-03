@@ -44,4 +44,6 @@ return require('packer').startup(function(use)
     use { 'github/copilot.vim', branch = 'release' }
 
     use { 'alvan/vim-closetag' }
+
+    use({ 'rebelot/terminal.nvim' })
 end)
