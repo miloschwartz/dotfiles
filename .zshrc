@@ -122,4 +122,4 @@ source $ZSH/oh-my-zsh.sh
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-bindkey -v
+# bindkey -v
