@@ -24,7 +24,6 @@ return require('packer').startup(function(use)
         requires = {
             { 'williamboman/mason.nvim' },
             { 'williamboman/mason-lspconfig.nvim' },
-
             { 'neovim/nvim-lspconfig' },
             { 'hrsh7th/nvim-cmp' },
             { 'hrsh7th/cmp-nvim-lsp' },
@@ -34,16 +33,20 @@ return require('packer').startup(function(use)
 
     use { 'sbdchd/neoformat' }
 
-    use {
-        'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
-    }
+    -- use {
+    --     'numToStr/Comment.nvim',
+    --     config = function()
+    --         require('Comment').setup()
+    --     end
+    -- }
 
     use { 'github/copilot.vim', branch = 'release' }
 
     use { 'alvan/vim-closetag' }
 
     use({ 'rebelot/terminal.nvim' })
+
+    use({ 'jiangmiao/auto-pairs' })
+
+    use({'rlane/pounce.nvim'})
 end)
