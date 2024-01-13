@@ -46,7 +46,9 @@ return require('packer').startup(function(use)
 
     use({ 'rebelot/terminal.nvim' })
 
-    use({ 'jiangmiao/auto-pairs' })
+    use({"windwp/nvim-autopairs"})
 
     use({'rlane/pounce.nvim'})
+
+    use({"danymat/neogen", depends = {"nvim-treesitter/nvim-treesitter"}})
 end)
