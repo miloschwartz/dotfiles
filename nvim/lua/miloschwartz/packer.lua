@@ -12,7 +12,12 @@ return require('packer').startup(function(use)
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
-    use('theprimeagen/harpoon')
+    use "nvim-lua/plenary.nvim"
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
 
     use('mbbill/undotree')
 
@@ -32,15 +37,6 @@ return require('packer').startup(function(use)
     }
 
     use { 'sbdchd/neoformat' }
-
-    -- use {
-    --     'numToStr/Comment.nvim',
-    --     config = function()
-    --         require('Comment').setup()
-    --     end
-    -- }
-
-    use { 'github/copilot.vim', branch = 'release' }
 
     use { 'alvan/vim-closetag' }
 

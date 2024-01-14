@@ -16,7 +16,7 @@ vim.api.nvim_set_keymap('n', '<leader>pb', ':Telescope buffers<CR>', { noremap =
 vim.api.nvim_set_keymap(
   "n",
   "<space>pv",
-  ":Telescope file_browser path=%:p:h select_buffer=true<CR><Esc>",
+  ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
   { noremap = true, silent = true }
 )
 
