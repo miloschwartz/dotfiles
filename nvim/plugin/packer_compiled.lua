@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -168,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/terminal.nvim",
     url = "https://github.com/rebelot/terminal.nvim"
+  },
+  ["tsc.nvim"] = {
+    loaded = true,
+    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/tsc.nvim",
+    url = "https://github.com/dmmulroy/tsc.nvim"
   },
   undotree = {
     loaded = true,

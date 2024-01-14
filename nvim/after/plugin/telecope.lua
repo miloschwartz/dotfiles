@@ -6,3 +6,17 @@ local builtin = require('telescope.builtin')
 end)
 
 vim.keymap.set('n', "<leader>lg", builtin.live_grep, {})
+
+-- open diagnostics window in telescope
+vim.api.nvim_set_keymap('n', '<leader>pd', ':Telescope diagnostics<CR>', { noremap = true, silent = true })
+
+-- open buffers window in telescope
+vim.api.nvim_set_keymap('n', '<leader>pb', ':Telescope buffers<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<space>pv",
+  ":Telescope file_browser path=%:p:h select_buffer=true<CR><Esc>",
+  { noremap = true, silent = true }
+)
+

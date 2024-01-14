@@ -51,4 +51,11 @@ return require('packer').startup(function(use)
     use({'rlane/pounce.nvim'})
 
     use({"danymat/neogen", depends = {"nvim-treesitter/nvim-treesitter"}})
+
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
+
+    use('dmmulroy/tsc.nvim')
 end)
