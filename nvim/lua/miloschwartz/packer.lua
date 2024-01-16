@@ -5,7 +5,10 @@ return require('packer').startup(function(use)
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = {
+            { 'nvim-lua/plenary.nvim' },
+            { "nvim-telescope/telescope-live-grep-args.nvim" }
+        }
     }
 
     use({ 'rose-pine/neovim', as = 'rose-pine' })
@@ -37,6 +40,8 @@ return require('packer').startup(function(use)
     }
 
     use { 'sbdchd/neoformat' }
+
+    use { 'github/copilot.vim', branch = 'release' }
 
     use { 'alvan/vim-closetag' }
 

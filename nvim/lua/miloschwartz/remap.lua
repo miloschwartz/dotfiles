@@ -11,9 +11,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
-
 vim.keymap.set("x", "<leader>p", [["_dP]])
-
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
@@ -67,6 +65,7 @@ vim.keymap.set('n', 'dw', '"_dw', { noremap = true, silent = true })
 vim.keymap.set('n', 'db', '"_db', { noremap = true, silent = true })
 vim.keymap.set('n', 'd$', '"_d$', { noremap = true, silent = true })
 vim.keymap.set('n', 'd^', '"_d^', { noremap = true, silent = true })
+
 
 -- Move to the left window with Ctrl-h
 vim.keymap.set("n", "<C-h>", "<C-w>h")
