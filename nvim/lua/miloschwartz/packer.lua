@@ -59,4 +59,8 @@ return require('packer').startup(function(use)
     }
 
     use('dmmulroy/tsc.nvim')
+
+    use {
+        "ray-x/lsp_signature.nvim",
+    }
 end)

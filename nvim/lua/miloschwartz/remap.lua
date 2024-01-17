@@ -13,6 +13,9 @@ vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+
+vim.api.nvim_set_keymap('x', '<leader>c', '"+ygv"_d', { noremap = true, silent = true })
+
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
@@ -36,12 +39,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
-
--- vim.keymap.set("n", "<leader>t", function()
---     vim.cmd("cd %:p:h")
---     vim.cmd("terminal")
---     vim.cmd("startinsert")
--- end)
 
 local cmp = require('cmp')
 cmp.setup({
