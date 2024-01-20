@@ -65,16 +65,13 @@ vim.keymap.set('n', 'd^', '"_d^', { noremap = true, silent = true })
 
 
 -- Move to the left window with Ctrl-h
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-
+vim.keymap.set("n", "<leader>h", "<C-w>h")
 -- Move to the down window with Ctrl-j
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-
+vim.keymap.set("n", "<leader>j", "<C-w>j")
 -- Move to the up window with Ctrl-k
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-
+vim.keymap.set("n", "<leader>k", "<C-w>k")
 -- Move to the right window with Ctrl-l
-vim.keymap.set("n", "<C-l>", "<C-w>l")
+vim.keymap.set("n", "<leader>l", "<C-w>l")
 
 local function find_git_root()
     local git_root = vim.fn.systemlist("git -C " .. vim.fn.expand('%:p:h') .. " rev-parse --show-toplevel")[1]

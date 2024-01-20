@@ -22,4 +22,3 @@ vim.api.nvim_set_keymap(
   ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
   { noremap = true, silent = true }
 )
-
