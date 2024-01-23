@@ -123,3 +123,38 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # bindkey -v
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/miloschwartz/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/miloschwartz/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/miloschwartz/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/miloschwartz/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# Function to cd into the selected directory, excluding hidden directories
+fuzzy_cd() {
+    local dir
+    local start_dir
+
+    # Check if in a git repo and get the root directory of the git repo
+    start_dir=$(git rev-parse --show-toplevel 2> /dev/null)
+
+    # If not in a git repo, start from the home directory
+    if [ -z "$start_dir" ]; then
+        start_dir="$HOME"
+    fi
+
+    # Find directories, excluding .hidden and node_modules directories
+    dir=$(find "$start_dir" -path '*/\.*' -prune -o -path '*/node_modules/*' -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$dir"
+}
+
+# Alias it for convenience
+alias fcd=fuzzy_cd
