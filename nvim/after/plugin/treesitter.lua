@@ -21,7 +21,7 @@ require 'nvim-treesitter.configs'.setup {
         "sql",
         "tsx",
         "yaml",
-        "jsdoc"
+        "jsdoc",
     },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
