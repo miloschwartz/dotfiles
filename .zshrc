@@ -148,8 +148,8 @@ fuzzy_cd() {
     git_root=$(git rev-parse --show-toplevel 2>/dev/null)
 
     if [ -n "$git_root" ]; then
-        # If in a git repo, start fuzzy finding from the git root
-        dir=$(find "$git_root" -type d 2> /dev/null | fzf +m)
+        # If in a git repo, start fuzzy finding from the git root, excluding hidden directories and node_modules
+        dir=$(find "$git_root" -path '*/.*' -prune -o -path '*/node_modules/*' -prune -o -type d -print 2> /dev/null | fzf +m)
     else
         # Check if cache file exists
         if [ ! -f "$cache_file" ]; then
