@@ -1,1 +1,14 @@
-/Users/miloschwartz/.alacritty.toml
+import = ["~/.config/alacritty/rose-pine.toml"]
+
+[font]
+size = 20 
+
+[font.normal]
+family = "FiraMono Nerd Font Mono"
+
+[window.padding]
+x = 10
+y = 10
+
+[colors.primary]
+background = "#000000"

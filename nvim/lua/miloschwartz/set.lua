@@ -31,11 +31,11 @@ vim.opt.updatetime = 50
 -- vim.opt.colorcolumn = "80"
 
 vim.diagnostic.config({
- --  virtual_text = {
- --    severity = {
- --      min = vim.diagnostic.severity.ERROR,
- --    },
- --  },
+   virtual_text = {
+     severity = {
+       min = vim.diagnostic.severity.ERROR,
+     },
+   },
     severity_sort = true,
 })
 

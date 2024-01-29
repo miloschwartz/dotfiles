@@ -93,3 +93,23 @@ lspconfig.clangd.setup {
     "--offset-encoding=utf-16",
   },
 }
+
+-- local util = lspconfig.util
+lspconfig.pyright.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = lsp_flags,
+    settings = {
+        python = {
+            analysis = {
+                autoSearchPaths = true,
+                diagnosticMode = 'openFilesOnly',
+                typeCheckingMode = 'off',
+            },
+        },
+    },
+    -- root_dir = function(fname)
+    --     return util.root_pattern(".git", "setup.py", "setup.cfg", "pyproject.toml", "requirements.txt")(fname) or
+    --     util.path.dirname(fname)
+    -- end
+}
