@@ -7,6 +7,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-c>", "<C-d>zz")
 vim.keymap.set("n", "<C-x>", "<C-u>zz")
+vim.keymap.set("n", "gd", "gdzz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "{", "{zz")
@@ -127,3 +128,9 @@ vim.keymap.set("n", "<leader>cap", function()
     vim.fn.setreg('+', dir_path)
     print("Copied absolute directory path: " .. dir_path)
 end)
+
+-- Disable Ctrl-Z in normal mode
+vim.keymap.set('n', '<C-z>', '<Nop>', {noremap = true, silent = true})
+
+-- If you also want to disable it in insert mode, you can add:
+vim.keymap.set('i', '<C-z>', '<Nop>', {noremap = true, silent = true})

@@ -1,4 +1,4 @@
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -33,7 +33,7 @@ vim.opt.updatetime = 50
 vim.diagnostic.config({
    virtual_text = {
      severity = {
-       min = vim.diagnostic.severity.ERROR,
+       -- min = vim.diagnostic.severity.ERROR,
      },
    },
     severity_sort = true,
@@ -56,3 +56,7 @@ vim.api.nvim_set_keymap(
   'n', '<leader>p', ':lua vim.diagnostic.goto_prev()<CR>',
   { noremap = true, silent = true }
 )
+
+  vim.cmd [[
+    let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+  ]]

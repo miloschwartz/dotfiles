@@ -1,4 +1,6 @@
-import = ["~/.config/alacritty/rose-pine.toml"]
+import = [
+#"~/.config/alacritty/rose-pine.toml"
+"~/.config/alacritty/catppuccin-latte.toml"]
 
 [font]
 size = 20 
@@ -6,9 +8,12 @@ size = 20
 [font.normal]
 family = "FiraMono Nerd Font Mono"
 
-[window.padding]
-x = 10
-y = 10
+[font.bold]
+family = "FiraMono Nerd Font Mono"
 
-[colors.primary]
-background = "#000000"
+[window.padding]
+x = 0
+y = 0
+
+[env]
+TERM = "screen-256color"
