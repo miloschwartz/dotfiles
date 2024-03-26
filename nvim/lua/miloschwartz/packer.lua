@@ -88,4 +88,10 @@ return require('packer').startup(function(use)
     }
 
     use 'unblevable/quick-scope'
+
+    -- use { 'nvim-treesitter/nvim-treesitter-context' }
+
+    use 'tomtom/tcomment_vim'
+
+    use({ "kylechui/nvim-surround", tag = "*" })
 end)

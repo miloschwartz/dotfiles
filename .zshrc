@@ -176,3 +176,31 @@ fuzzy_cd() {
 
 # Alias it for convenience
 alias fcd=fuzzy_cd
+
+# git aliases
+alias less='less -r'
+alias ls='ls -F --color --show-control-chars'
+alias ll='ls -l'
+alias gs='git status '
+alias gss='git status -s'
+alias gp='git pull -r'
+alias gh='git push '
+alias gho='git push -u origin '
+alias up='git push '
+alias upo='git push -u origin '
+alias ga='git add '
+alias gaa='git add -A'
+alias gb='git branch '
+alias gc='git commit '
+alias gcm='git commit -m '
+alias gd='git diff'
+alias go='git checkout '
+alias gob='git checkout -b'
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias got='git '
+alias get='git '
+alias g='git '
+alias gm='git merge '
+alias gr='git reset '
+alias gdf='git clean -f'

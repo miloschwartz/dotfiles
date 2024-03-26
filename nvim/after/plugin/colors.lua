@@ -12,7 +12,7 @@
 -- ColorMyPencils()
 
 require("catppuccin").setup({
-    flavour = "Mocha"
+    flavour = "mocha",
 })
 
 -- setup must be called before loading

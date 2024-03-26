@@ -1,4 +1,6 @@
-require("telescope").load_extension("live_grep_args")
+local tele = require("telescope")
+
+tele.load_extension("live_grep_args")
 
 local builtin = require('telescope.builtin')
     vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
@@ -23,3 +25,6 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
+
+vim.keymap.set("n", "<leader>pr", require("telescope.builtin").resume, { noremap = true, silent = true, desc = "Resume", })
+vim.keymap.set("n", "<leader>lr", require("telescope.builtin").resume, { noremap = true, silent = true, desc = "Resume", })
