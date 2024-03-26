@@ -204,3 +204,4 @@ alias g='git '
 alias gm='git merge '
 alias gr='git reset '
 alias gdf='git clean -f'
+alias gpu="git push --set-upstream origin \$(git rev-parse --abbrev-ref HEAD"
