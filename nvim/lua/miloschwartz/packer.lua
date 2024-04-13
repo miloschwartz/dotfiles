@@ -53,66 +53,123 @@ return require('packer').startup(function(use)
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         requires = {
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
-            {'neovim/nvim-lspconfig'},
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'L3MON4D3/LuaSnip'},
+            {
+                'williamboman/mason.nvim',
+                commit = "751b1fcbf3d3b783fcf8d48865264a9bcd8f9b10"
+            },
+            {
+                'williamboman/mason-lspconfig.nvim',
+                commit = "44509689b9bf3984d729cc264aacb31cb7f41668"
+            },
+            {
+                'neovim/nvim-lspconfig',
+                commit = "b3014f2209503944f2714cf27c95591433a0c7d8"
+            },
+            {
+                'hrsh7th/nvim-cmp',
+                commit = "ce16de5665c766f39c271705b17fff06f7bcb84f"
+            },
+            {
+                'hrsh7th/cmp-nvim-lsp',
+                commit = "5af77f54de1b16c34b23cba810150689a3a90312"
+            },
+            {
+                'L3MON4D3/LuaSnip',
+                commit = "be7be2ca7f55bb881a7ffc16b2efa5af034ab06b"
+            },
         }
     }
 
-    use {'sbdchd/neoformat'}
-
-    use {'github/copilot.vim', branch = 'release'}
-
-    use {'alvan/vim-closetag'}
-
-    use {"windwp/nvim-autopairs"}
-
-    use {'rlane/pounce.nvim'}
-
     use {
-        "nvim-telescope/telescope-file-browser.nvim",
-        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"}
+        'sbdchd/neoformat',
+        commit = "4372abb846f43ec121df40e620682c985ebc8286"
     }
 
-    use {'dmmulroy/tsc.nvim'}
+    use {
+        'github/copilot.vim',
+        branch = 'release',
+        commit = "1e135c5303bc60598f6314a2276f31dc91aa34dd"
+    }
 
-    use {"ray-x/lsp_signature.nvim"}
+    use {
+        'alvan/vim-closetag',
+        commit = "d0a562f8bdb107a50595aefe53b1a690460c3822"
+    }
+
+    use {
+        "windwp/nvim-autopairs",
+        commit = "4f41e5940bc0443fdbe5f995e2a596847215cd2a"
+    }
+
+    use {
+        'rlane/pounce.nvim',
+        commit = "0c044cad69571d57d8f64a41cca95332859b6abc"
+    }
+
+    use {
+        'dmmulroy/tsc.nvim',
+        commit = "2576637ce46aed84240da33496eee6430b0f0248"
+    }
+
+    use {
+        "ray-x/lsp_signature.nvim",
+        commit = "c6aeb2f1d2538bbdfdaab1664d9d4c3c75aa9db8"
+    }
+
+    use {
+        'nvim-tree/nvim-web-devicons',
+        commit = "6e355632387a085f15a66ad68cf681c1d7374a04"
+    }
 
     use {
         'nvim-lualine/lualine.nvim',
-        requires = {'nvim-tree/nvim-web-devicons', opt = true}
+        after = 'nvim-web-devicons',
+        commit = "0a5a66803c7407767b799067986b4dc3036e1983"
     }
 
-    use {'nvim-tree/nvim-web-devicons'}
+    use {
+        'unblevable/quick-scope',
+        commit = "256d81e391a22eeb53791ff62ce65f870418fa71"
+    }
 
-    use {'unblevable/quick-scope'}
+    use {
+        'tomtom/tcomment_vim',
+        commit = "48ab639a461d9b8344f7fee06cb69b4374863b13"
+    }
 
-    use {'tomtom/tcomment_vim'}
-
-    use {"kylechui/nvim-surround", tag = "*"}
+    use {
+        "kylechui/nvim-surround",
+        commit = "a4e30d33add8a9743b4f518b3a788b3c8e5def71"
+    }
 
     use {
         "nvim-treesitter/nvim-treesitter-textobjects",
         after = "nvim-treesitter",
+        commit = "c180aef9a197e9fe64cc285171910b8ea1400952"
     }
 
     use {
         "aznhe21/actions-preview.nvim",
+        commit = "5072b1b1065a6b22bdd46b5c21780a91d6a08071"
     }
 
     use {
         'VonHeikemen/fine-cmdline.nvim',
         requires = {
-            {'MunifTanjim/nui.nvim'}
+            {
+                'MunifTanjim/nui.nvim',
+                commit = "cbd2668414331c10039278f558630ed19b93e69b"
+            }
         }
     }
 
     use {
         "stevearc/oil.nvim",
+        commit = "e462a3446505185adf063566f5007771b69027a1"
     }
 
-    use {'nvim-tree/nvim-tree.lua'}
+    use {
+        'nvim-tree/nvim-tree.lua',
+        commit = "81eb8d519233c105f30dc0a278607e62b20502fd"
+    }
 end)

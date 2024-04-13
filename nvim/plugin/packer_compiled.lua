@@ -122,8 +122,10 @@ _G.packer_plugins = {
     url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["lualine.nvim"] = {
+    load_after = {},
     loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    needs_bufread = false,
+    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
@@ -218,11 +220,6 @@ _G.packer_plugins = {
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/tcomment_vim",
     url = "https://github.com/tomtom/tcomment_vim"
   },
-  ["telescope-file-browser.nvim"] = {
-    loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
-    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
-  },
   ["telescope-live-grep-args.nvim"] = {
     loaded = true,
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/telescope-live-grep-args.nvim",
@@ -255,6 +252,8 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-web-devicons ]]
+vim.cmd [[ packadd lualine.nvim ]]
 vim.cmd [[ packadd plenary.nvim ]]
 vim.cmd [[ packadd harpoon ]]
 vim.cmd [[ packadd telescope-live-grep-args.nvim ]]
