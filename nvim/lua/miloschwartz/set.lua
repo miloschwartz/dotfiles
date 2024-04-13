@@ -1,6 +1,7 @@
 -- vim.opt.guicursor = ""
 
 vim.opt.nu = true
+vim.o.cmdheight=0
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4

@@ -28,3 +28,4 @@ vim.api.nvim_set_keymap(
 
 vim.keymap.set("n", "<leader>pr", require("telescope.builtin").resume, { noremap = true, silent = true, desc = "Resume", })
 vim.keymap.set("n", "<leader>lr", require("telescope.builtin").resume, { noremap = true, silent = true, desc = "Resume", })
+vim.keymap.set ("n", "<leader>pt", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })

@@ -61,9 +61,7 @@ return require('packer').startup(function(use)
 
     use('dmmulroy/tsc.nvim')
 
-    use {
-        "ray-x/lsp_signature.nvim",
-    }
+    use { "ray-x/lsp_signature.nvim", }
 
     use {
         'nvim-lualine/lualine.nvim',
@@ -76,17 +74,6 @@ return require('packer').startup(function(use)
     --     'nvim-tree/nvim-tree.lua',
     -- }
 
-    use {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        requires = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-        }
-    }
-
     use 'unblevable/quick-scope'
 
     -- use { 'nvim-treesitter/nvim-treesitter-context' }
@@ -94,4 +81,27 @@ return require('packer').startup(function(use)
     use 'tomtom/tcomment_vim'
 
     use({ "kylechui/nvim-surround", tag = "*" })
+
+    use({
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        after = "nvim-treesitter",
+        requires = "nvim-treesitter/nvim-treesitter",
+    })
+
+    -- use "lukas-reineke/indent-blankline.nvim"
+
+    use {
+        "aznhe21/actions-preview.nvim",
+    }
+
+    use {
+        'VonHeikemen/fine-cmdline.nvim',
+        requires = {
+            {'MunifTanjim/nui.nvim'}
+        }
+    }
+
+    use({
+        "stevearc/oil.nvim",
+    })
 end)

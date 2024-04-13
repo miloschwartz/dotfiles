@@ -178,30 +178,36 @@ fuzzy_cd() {
 alias fcd=fuzzy_cd
 
 # git aliases
-alias less='less -r'
-alias ls='ls -F --color --show-control-chars'
-alias ll='ls -l'
 alias gs='git status '
-alias gss='git status -s'
-alias gp='git pull -r'
-alias gh='git push '
-alias gho='git push -u origin '
-alias up='git push '
-alias upo='git push -u origin '
+alias gp='git push '
+alias gpl='git pull '
 alias ga='git add '
 alias gaa='git add -A'
 alias gb='git branch '
 alias gc='git commit '
 alias gcm='git commit -m '
+alias gca='git commit --amend'
 alias gd='git diff'
-alias go='git checkout '
+alias gco='git checkout '
 alias gob='git checkout -b'
-alias gk='gitk --all&'
-alias gx='gitx --all'
-alias got='git '
-alias get='git '
 alias g='git '
 alias gm='git merge '
-alias gr='git reset '
-alias gdf='git clean -f'
-alias gpu="git push --set-upstream origin \$(git rev-parse --abbrev-ref HEAD"
+alias gpu="git push --set-upstream origin "
+
+#python
+alias p3='python3'
+alias pip='pip3'
+
+#aws
+alias tgp='AWS_PROFILE=tg-prod '
+alias tgd='AWS_PROFILE=tg-dev '
+alias tgs='AWS_PROFILE=tg-staging '
+
+# npm
+alias ni='npm install'
+alias nid='npm install --save-dev'
+alias nr='npm run'
+alias n='npm'
+
+# nvim 
+alias v='nvim '

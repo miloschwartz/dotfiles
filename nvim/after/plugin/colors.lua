@@ -13,6 +13,7 @@
 
 require("catppuccin").setup({
     flavour = "mocha",
+    no_bold = true,
 })
 
 -- setup must be called before loading
