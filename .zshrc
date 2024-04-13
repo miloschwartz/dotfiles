@@ -141,37 +141,18 @@ unset __conda_setup
 
 fuzzy_cd() {
     local dir
-    local cache_file="$HOME/.dir_cache"
-    local target_dir="$1" # Capture the first argument as the target directory
+    local git_root
 
-    # Determine the base directory for fuzzy finding
-    local base_dir=""
+    # Attempt to find the root of the git repository
+    git_root=$(git rev-parse --show-toplevel 2>/dev/null)
 
-    if [ -n "$target_dir" ]; then
-        # If a target directory is provided, use it as the base for fuzzy finding
-        base_dir="$target_dir"
+    if [ -n "$git_root" ]; then
+        dir=$(find "$git_root" -path '*/.*' -prune -o -path '*/node_modules/*' -prune -o -type d -print 2> /dev/null | fzf +m)
     else
-        # If no target directory is provided, try to find the git repository root
-        local git_root=$(git rev-parse --show-toplevel 2>/dev/null)
-        if [ -n "$git_root" ]; then
-            base_dir="$git_root"
-        fi
+        dir=$(find "$HOME" -path '*/.*' -prune -o -path '*/node_modules/*' -prune -o -type d -print 2> /dev/null | fzf +m)
     fi
 
-    if [ -n "$base_dir" ]; then
-        # Perform fuzzy finding from the determined base directory
-        dir=$(find "$base_dir" -path '*/.*' -prune -o -path '*/node_modules/*' -prune -o -type d -print 2> /dev/null | fzf +m)
-    else
-        # If not in a git repo and no directory is provided, use the cache if it exists
-        if [ ! -f "$cache_file" ]; then
-            echo "Directory cache not found. Please wait while caching..."
-            ~/.dotfiles/cache_dirs.sh
-        fi
-        dir=$(cat "$cache_file" | fzf +m)
-    fi
-
-    # Change directory to the selected one
-    [ -n "$dir" ] && cd "$dir" || echo "No directory selected or operation cancelled."
+    [ -n "$dir" ] && cd "$dir"
 }
 
 # Alias it for convenience

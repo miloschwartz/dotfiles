@@ -105,8 +105,10 @@ _G.packer_plugins = {
     url = "https://github.com/VonHeikemen/fine-cmdline.nvim"
   },
   harpoon = {
+    load_after = {},
     loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/harpoon",
+    needs_bufread = false,
+    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/opt/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
   ["lsp-zero.nvim"] = {
@@ -227,8 +229,10 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope-live-grep-args.nvim"
   },
   ["telescope.nvim"] = {
+    load_after = {},
     loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    needs_bufread = true,
+    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/opt/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tsc.nvim"] = {
@@ -251,6 +255,10 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
+vim.cmd [[ packadd plenary.nvim ]]
+vim.cmd [[ packadd harpoon ]]
+vim.cmd [[ packadd telescope-live-grep-args.nvim ]]
+vim.cmd [[ packadd telescope.nvim ]]
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd nvim-treesitter-textobjects ]]
 time([[Sequenced loading]], false)
