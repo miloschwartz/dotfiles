@@ -42,22 +42,22 @@ vim.diagnostic.config({
 
 -- Show all diagnostics on current line in floating window
 vim.api.nvim_set_keymap(
-  'n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>', 
-  { noremap = true, silent = true }
+  'n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>',
+  { noremap = true, silent = true, nowait=true}
 )
 -- Go to next diagnostic (if there are multiple on the same line, only shows
 -- one at a time in the floating window)
 vim.api.nvim_set_keymap(
-  'n', '<leader>n', ':lua vim.diagnostic.goto_next()<CR>',
-  { noremap = true, silent = true }
+  'n', '<leader>dn', ':lua vim.diagnostic.goto_next()<CR>',
+  { noremap = true, silent = true, nowait=true}
 )
 -- Go to prev diagnostic (if there are multiple on the same line, only shows
 -- one at a time in the floating window)
 vim.api.nvim_set_keymap(
-  'n', '<leader>p', ':lua vim.diagnostic.goto_prev()<CR>',
+  'n', '<leader>dp', ':lua vim.diagnostic.goto_prev()<CR>',
   { noremap = true, silent = true }
 )
 
-  vim.cmd [[
+vim.cmd [[
     let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-  ]]
+]]

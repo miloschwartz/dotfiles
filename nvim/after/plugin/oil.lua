@@ -46,7 +46,7 @@ oil.setup({
     -- Set to `false` to disable, or "name" to keep it on the file names
     constrain_cursor = "editable",
     -- Set to true to watch the filesystem for changes and reload oil
-    experimental_watch_for_changes = false,
+    experimental_watch_for_changes = true,
     -- Keymaps in oil buffer. Can be any value that `vim.keymap.set` accepts OR a table of keymap
     -- options with a `callback` (e.g. { callback = function() ... end, desc = "", mode = "n" })
     -- Additionally, if it is a string that matches "actions.<name>",
@@ -101,7 +101,7 @@ oil.setup({
     -- Configuration for the floating window in oil.open_float
     float = {
         -- Padding around the floating window
-        padding = 2,
+        padding = 0,
         max_width = 0,
         max_height = 0,
         border = "rounded",
@@ -159,4 +159,4 @@ oil.setup({
     },
 })
 
-vim.keymap.set("n", "<leader>bf", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>bf", "<CMD>Oil<CR>", { desc = "Open parent directory", nowait = true, silent = true })

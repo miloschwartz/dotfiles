@@ -18,14 +18,12 @@ vim.api.nvim_set_keymap('n', '<leader>pd', ':Telescope diagnostics<CR>', { norem
 -- open buffers window in telescope
 vim.api.nvim_set_keymap('n', '<leader>pb', ':Telescope buffers<CR>', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap(
-  "n",
-  "<space>pv",
-  ":Telescope file_browser path=%:p:h select_buffer=true hidden=true<CR>",
-  { noremap = true, silent = true }
-)
-
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<space>pv",
+--   ":Telescope file_browser path=%:p:h select_buffer=true hidden=true<CR>",
+--   { noremap = true, silent = true }
+-- )
 
 vim.keymap.set("n", "<leader>pr", require("telescope.builtin").resume, { noremap = true, silent = true, desc = "Resume", })
 vim.keymap.set("n", "<leader>lr", require("telescope.builtin").resume, { noremap = true, silent = true, desc = "Resume", })
-vim.keymap.set ("n", "<leader>pt", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
