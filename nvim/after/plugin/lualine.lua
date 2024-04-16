@@ -5,14 +5,15 @@ require('lualine').setup {
         section_separators = '',
         component_separators = '',
     },
+    extensions = { "nvim-tree", "oil" },
     sections = {
         lualine_a = {
             { 'mode', fmt = function(str) return string.lower(str) end }
         },
-        lualine_b = {'branch', 'diff', 'diagnostics'},
+        lualine_b = {'branch', 'diff'},
         lualine_c = {'filename'},
-        lualine_x = {'filetype'},
+        lualine_x = {'diagnostics', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {'location'}
-    }
+    },
 }

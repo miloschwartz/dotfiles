@@ -113,3 +113,10 @@ lspconfig.pyright.setup {
     --     util.path.dirname(fname)
     -- end
 }
+
+lsp_zero.set_sign_icons({
+  error = ' ',
+  warn = '',
+  hint = '󰌶',
+  info = ''
+})

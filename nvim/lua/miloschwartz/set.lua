@@ -1,7 +1,7 @@
 -- vim.opt.guicursor = ""
 
 vim.opt.nu = true
-vim.o.cmdheight=0
+-- vim.o.cmdheight=0
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
@@ -32,32 +32,12 @@ vim.opt.updatetime = 50
 -- vim.opt.colorcolumn = "80"
 
 vim.diagnostic.config({
-   virtual_text = {
-     severity = {
-       -- min = vim.diagnostic.severity.ERROR,
-     },
-   },
+    virtual_text = {
+        severity = {
+            min = vim.diagnostic.severity.ERROR,
+        },
+    },
     severity_sort = true,
 })
 
--- Show all diagnostics on current line in floating window
-vim.api.nvim_set_keymap(
-  'n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>',
-  { noremap = true, silent = true, nowait=true}
-)
--- Go to next diagnostic (if there are multiple on the same line, only shows
--- one at a time in the floating window)
-vim.api.nvim_set_keymap(
-  'n', '<leader>dn', ':lua vim.diagnostic.goto_next()<CR>',
-  { noremap = true, silent = true, nowait=true}
-)
--- Go to prev diagnostic (if there are multiple on the same line, only shows
--- one at a time in the floating window)
-vim.api.nvim_set_keymap(
-  'n', '<leader>dp', ':lua vim.diagnostic.goto_prev()<CR>',
-  { noremap = true, silent = true }
-)
-
-vim.cmd [[
-    let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-]]
+vim.diagnostic.config({ virtual_text = { prefix = '' }})

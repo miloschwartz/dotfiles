@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+-- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-c>", "<C-d>zz")
 vim.keymap.set("n", "<C-x>", "<C-u>zz")
@@ -54,3 +56,27 @@ vim.keymap.set('n', '<C-z>', '<Nop>', {noremap = true, silent = true})
 
 -- If you also want to disable it in insert mode, you can add:
 vim.keymap.set('i', '<C-z>', '<Nop>', {noremap = true, silent = true})
+
+-- Show all diagnostics on current line in floating window
+vim.api.nvim_set_keymap(
+  'n', '<leader>da', ':lua vim.diagnostic.open_float()<CR>',
+  { noremap = true, silent = true, nowait=true}
+)
+-- Go to next diagnostic (if there are multiple on the same line, only shows
+-- one at a time in the floating window)
+vim.api.nvim_set_keymap(
+  'n', '<leader>dn', ':lua vim.diagnostic.goto_next()<CR>',
+  { noremap = true, silent = true, nowait=true}
+)
+-- Go to prev diagnostic (if there are multiple on the same line, only shows
+-- one at a time in the floating window)
+vim.api.nvim_set_keymap(
+  'n', '<leader>dp', ':lua vim.diagnostic.goto_prev()<CR>',
+  { noremap = true, silent = true }
+)
+
+vim.cmd [[
+    let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+]]
+
+vim.api.nvim_set_keymap('n', '<Leader>fo', '<cmd>lua require("miloschwartz/fuzzy_oil").search_dirs_and_open_in_oil()<CR>', {noremap = true, silent = true, nowait=true})

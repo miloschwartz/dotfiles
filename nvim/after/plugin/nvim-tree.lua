@@ -4,13 +4,46 @@ require("nvim-tree").setup({
     },
     view = {
         width = 40,
+        relativenumber = true,
     },
     renderer = {
         group_empty = true,
+        indent_markers = {
+            enable = false,
+        },
+        icons = {
+            glyphs = {
+                git = {
+                    unstaged = '',
+                    staged = '',
+                    unmerged = '',
+                    renamed = '',
+                    deleted = '',
+                    untracked = '',
+                    ignored = '',
+
+                },
+                -- folder = {
+                --     arrow_closed = "", -- arrow when folder is closed
+                --     arrow_open = "", -- arrow when folder is open
+                -- },
+            },
+        },
     },
     filters = {
         dotfiles = false,
     },
+    hijack_directories = {
+        enable = true,
+        auto_open = true,
+    },
+    update_focused_file = {
+        enable = true,
+        update_root = {
+            enable = true,
+            ignore_list = {},
+        },
+    },
 })
 
-vim.api.nvim_set_keymap('n', '<leader>bbf', ':NvimTreeToggle<CR>', { noremap = true, silent = true, nowait = true })
+vim.api.nvim_set_keymap('n', '<leader>nt', ':NvimTreeToggle<CR>', { noremap = true, silent = true, nowait = true })

@@ -14,6 +14,10 @@
 require("catppuccin").setup({
     flavour = "mocha",
     no_bold = true,
+    no_italic = false,
+    integrations = {
+        nvimtree = false,
+    }
 })
 
 -- setup must be called before loading

@@ -154,16 +154,6 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'VonHeikemen/fine-cmdline.nvim',
-        requires = {
-            {
-                'MunifTanjim/nui.nvim',
-                commit = "cbd2668414331c10039278f558630ed19b93e69b"
-            }
-        }
-    }
-
-    use {
         "stevearc/oil.nvim",
         commit = "e462a3446505185adf063566f5007771b69027a1"
     }
@@ -171,5 +161,29 @@ return require('packer').startup(function(use)
     use {
         'nvim-tree/nvim-tree.lua',
         commit = "81eb8d519233c105f30dc0a278607e62b20502fd"
+    }
+
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        commit = "5ee5002373655fd684a4ad0d47a3de876ceacf9a",
+        after = {
+            "telescope.nvim",
+            "plenary.nvim"
+        }
+    }
+
+    use {
+        "lewis6991/gitsigns.nvim",
+        commit = "d96ef3bbff0bdbc3916a220f5c74a04c4db033f2"
+    }
+
+    use {
+        "lukas-reineke/indent-blankline.nvim",
+        commit = "3d08501caef2329aba5121b753e903904088f7e6"
+    }
+
+    use {
+        "echasnovski/mini.nvim",
+        commit = "e3d13e2c89a9dfda51c69c825360d1fe5be0e322"
     }
 end)

@@ -159,4 +159,4 @@ oil.setup({
     },
 })
 
-vim.keymap.set("n", "<leader>bf", "<CMD>Oil<CR>", { desc = "Open parent directory", nowait = true, silent = true })
+vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Open parent directory", nowait = true, silent = true })
