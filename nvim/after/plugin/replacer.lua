@@ -1,0 +1,5 @@
+-- local opts = { save_on_write = false, rename_files = false }
+--
+-- vim.api.nvim_set_keymap('n', '<Leader>h', ':lua require("replacer").run(opts)<cr>', { silent = true })
+--
+-- vim.api.nvim_set_keymap('n', '<Leader>H', ':lua require("replacer").save(opts)<cr>', { silent = true })

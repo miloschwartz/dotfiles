@@ -186,4 +186,23 @@ return require('packer').startup(function(use)
         "echasnovski/mini.nvim",
         commit = "e3d13e2c89a9dfda51c69c825360d1fe5be0e322"
     }
+
+    use {
+        "tpope/vim-fugitive",
+        commit = "dac8e5c2d85926df92672bf2afb4fc48656d96c7"
+    }
+
+    use {
+        'kevinhwang91/nvim-bqf',
+        commit = "52703d7adc3be3f7c09eea9a80c5b8caa615fb25"
+    }
+
+    -- use {
+    --     "gabrielpoca/replacer.nvim",
+    --     commit = "32e1713230844fa52f7f0598c59295de3c90dc95"
+    -- }
+    use {
+        "stefandtw/quickfix-reflector.vim",
+        commit = "6a6a9e28e1713b9e9db99eec1e6672e5666c01b9"
+    }
 end)

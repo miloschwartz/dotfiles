@@ -1,5 +1,16 @@
 local tele = require("telescope")
 
+tele.setup({
+    defaults = {
+        mappings = {
+            i = {
+                ["<C-S-q>"] = require("telescope.actions").smart_send_to_qflist + require("telescope.actions").open_qflist,
+                ["<C-S-w>"] = require("telescope.actions").send_to_qflist
+            }
+        }
+    }
+})
+
 tele.load_extension("live_grep_args")
 
 local builtin = require('telescope.builtin')
