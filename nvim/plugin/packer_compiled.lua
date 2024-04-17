@@ -158,11 +158,6 @@ _G.packer_plugins = {
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
-  ["nvim-bqf"] = {
-    loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/nvim-bqf",
-    url = "https://github.com/kevinhwang91/nvim-bqf"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -280,9 +275,9 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd telescope-live-grep-args.nvim ]]
 vim.cmd [[ packadd nvim-web-devicons ]]
 vim.cmd [[ packadd lualine.nvim ]]
+vim.cmd [[ packadd telescope-live-grep-args.nvim ]]
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd nvim-treesitter-textobjects ]]
 vim.cmd [[ packadd plenary.nvim ]]
