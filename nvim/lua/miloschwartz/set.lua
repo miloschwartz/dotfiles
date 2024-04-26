@@ -32,12 +32,22 @@ vim.opt.updatetime = 50
 -- vim.opt.colorcolumn = "80"
 
 vim.diagnostic.config({
-    virtual_text = {
-        severity = {
-            min = vim.diagnostic.severity.ERROR,
-        },
+  virtual_text = {
+    severity = {
+      min = vim.diagnostic.severity.WARN
     },
-    severity_sort = true,
+  },
+  signs = {
+    severity = {
+      min = vim.diagnostic.severity.WARN
+    },
+  },
+  underline = {
+    severity = {
+      min = vim.diagnostic.severity.WARN
+    },
+  },
+  severity_sort = true,
 })
 
-vim.diagnostic.config({ virtual_text = { prefix = '' }})
+-- vim.diagnostic.config({ virtual_text = { prefix = '' }})

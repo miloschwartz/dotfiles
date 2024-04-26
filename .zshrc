@@ -164,16 +164,17 @@ alias gp='git push '
 alias gpl='git pull '
 alias ga='git add '
 alias gaa='git add -A'
-alias gb='git branch '
+alias gb='git branch --oneline'
 alias gc='git commit '
 alias gcm='git commit -m '
 alias gca='git commit --amend'
-alias gd='git diff'
+alias gd='git diff --oneline'
 alias gco='git checkout '
 alias gob='git checkout -b'
 alias g='git '
 alias gm='git merge '
 alias gpu="git push --set-upstream origin "
+alias gl="git log --oneline"
 
 #python
 alias p3='python3'

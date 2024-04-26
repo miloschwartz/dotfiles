@@ -1,2 +1,1 @@
-vim.keymap.set("n", "<leader>cf", ":Neoformat \n<cr>")
-
+vim.keymap.set("n", "<leader>nf", ":Neoformat<cr>")

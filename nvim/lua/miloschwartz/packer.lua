@@ -196,4 +196,9 @@ return require('packer').startup(function(use)
         "stefandtw/quickfix-reflector.vim",
         commit = "6a6a9e28e1713b9e9db99eec1e6672e5666c01b9"
     }
+
+    use {
+        'nvim-pack/nvim-spectre',
+        commit = "9653847cf2f225648967f6e9363643e327387579"
+    }
 end)
