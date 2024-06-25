@@ -193,3 +193,6 @@ alias n='npm'
 
 # nvim 
 alias v='nvim '
+
+# dotenvx
+alias dx="dotenvx run -- "

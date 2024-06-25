@@ -3,11 +3,11 @@ require("nvim-tree").setup({
         sorter = "case_sensitive",
     },
     view = {
-        width = 40,
+        width = 60,
         relativenumber = true,
     },
     renderer = {
-        group_empty = true,
+        group_empty = false,
         indent_markers = {
             enable = false,
         },
@@ -24,10 +24,10 @@ require("nvim-tree").setup({
 
                 },
                 folder = {
-                    default = " ",
-                    open = " ",
-                    -- arrow_closed = "", -- arrow when folder is closed
-                    -- arrow_open = "", -- arrow when folder is open
+                    -- default = " ",
+                    -- open = " ",
+                    arrow_closed = "", -- arrow when folder is closed
+                    arrow_open = "", -- arrow when folder is open
                 },
             },
         },

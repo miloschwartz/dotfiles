@@ -31,11 +31,21 @@ return require('packer').startup(function(use)
         commit = "08c6417bdc3b29e5f8c53e2cfe4067f288d49a54"
     }
 
+	-- use {
+	-- 	"folke/tokyonight.nvim",
+	-- 	commit = "2969eb4e31c23fc0dc98d8b793df10b598aed762"
+	-- }
+
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
         commit = 'ef267f0c285928ea3a0d3362a260a0728fd4a146'
     }
+
+	-- use {
+	-- 	"dlvandenberg/tree-sitter-angular",
+	-- 	commit = "10f21f3f1b10584e62ecc113ab3cda1196d0ceb8"
+	-- }
 
     use {
         "ThePrimeagen/harpoon",

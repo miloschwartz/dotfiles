@@ -80,3 +80,10 @@ vim.cmd [[
 ]]
 
 vim.api.nvim_set_keymap('n', '<Leader>fo', '<cmd>lua require("miloschwartz/fuzzy_oil").search_dirs_and_open_in_oil()<CR>', {noremap = true, silent = true, nowait=true})
+
+-- Remap <C-y> to move the viewport up by one line while keeping the cursor in the same place
+vim.api.nvim_set_keymap('n', '<C-n>', 'mz<C-y>`z', { noremap = true, silent = true })
+
+-- Remap <C-e> to move the viewport down by one line while keeping the cursor in the same place
+vim.api.nvim_set_keymap('n', '<C-m>', 'mz<C-e>`z', { noremap = true, silent = true })
+
