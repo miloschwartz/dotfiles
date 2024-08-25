@@ -1,22 +1,36 @@
-import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+# import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+# import = [ "~/.config/alacritty/themes/themes/blood_moon.toml" ]
+# import = [ "~/.config/alacritty/themes/themes/hyper.toml" ]
 
 [font]
-size = 23
+size = 24
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+# family = "MesloLGL Nerd Font"
+# family = "FiraMono Nerd Font"
+family = "BlexMono Nerd Font Mono"
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+# family = "MesloLGL Nerd Font" 
+# family = "FiraMono Nerd Font"
+family = "BlexMono Nerd Font Mono"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+# family = "MesloLGL Nerd Font"
+# family = "FiraMono Nerd Font"
+family = "BlexMono Nerd Font Mono"
 
 [window]
-dynamic_title = true
+dynamic_title = false
 dynamic_padding = true
-resize_increments = true
+# resize_increments = true
 decorations_theme_variant = "Dark"
+decorations = "Buttonless"
+# opacity = 0.95
+# blur = true
 
 [window.padding]
 x = 0
@@ -24,3 +38,16 @@ y = 0
 
 [env]
 TERM = "xterm-256color"
+
+[colors.primary]
+background = "#021012"
+
+[keyboard]
+bindings = [
+  { key = "Right", mods = "Alt", chars = "\u001BF" },
+  { key = "Left",  mods = "Alt", chars = "\u001BB" },
+  { key = "Backspace", mods = "Alt", chars = "\u001B\u007F" },
+  { key = "Backspace", mods = "Command", chars = "\u0015" },
+  { key = "Left",  mods = "Command", chars = "\u001BOH", mode = "AppCursor" },
+  { key = "Right", mods = "Command", chars = "\u001BOF", mode = "AppCursor" },
+]

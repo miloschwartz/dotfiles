@@ -3,7 +3,7 @@ require("nvim-tree").setup({
         sorter = "case_sensitive",
     },
     view = {
-        width = 60,
+        width = 40,
         relativenumber = true,
     },
     renderer = {
@@ -24,10 +24,10 @@ require("nvim-tree").setup({
 
                 },
                 folder = {
-                    -- default = " ",
-                    -- open = " ",
-                    arrow_closed = "", -- arrow when folder is closed
-                    arrow_open = "", -- arrow when folder is open
+                    default = "",
+                    open = "",
+                    -- arrow_closed = "", -- arrow when folder is closed
+                    -- arrow_open = "", -- arrow when folder is open
                 },
             },
         },

@@ -43,13 +43,13 @@ vim.keymap.set('n', 'd^', '"_d^', { noremap = true, silent = true })
 
 
 -- Move to the left window with Ctrl-h
-vim.keymap.set("n", "<leader>h", "<C-w>h")
+vim.keymap.set("n", "<leader>h", "<C-w>h", { nowait=true })
 -- Move to the down window with Ctrl-j
-vim.keymap.set("n", "<leader>j", "<C-w>j")
+vim.keymap.set("n", "<leader>j", "<C-w>j", { nowait=true })
 -- Move to the up window with Ctrl-k
-vim.keymap.set("n", "<leader>k", "<C-w>k")
+vim.keymap.set("n", "<leader>k", "<C-w>k", { nowait=true })
 -- Move to the right window with Ctrl-l
-vim.keymap.set("n", "<leader>l", "<C-w>l")
+vim.keymap.set("n", "<leader>l", "<C-w>l", { nowait=true })
 
 -- Disable Ctrl-Z in normal mode
 vim.keymap.set('n', '<C-z>', '<Nop>', {noremap = true, silent = true})
@@ -82,8 +82,12 @@ vim.cmd [[
 vim.api.nvim_set_keymap('n', '<Leader>fo', '<cmd>lua require("miloschwartz/fuzzy_oil").search_dirs_and_open_in_oil()<CR>', {noremap = true, silent = true, nowait=true})
 
 -- Remap <C-y> to move the viewport up by one line while keeping the cursor in the same place
-vim.api.nvim_set_keymap('n', '<C-n>', 'mz<C-y>`z', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-n>', 'mz<C-y>`z', { noremap = true, silent = true })
 
 -- Remap <C-e> to move the viewport down by one line while keeping the cursor in the same place
-vim.api.nvim_set_keymap('n', '<C-m>', 'mz<C-e>`z', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-m>', 'mz<C-e>`z', { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap('n', '<C-n>', ':cnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-m>', ':cprev<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<S-8>', ':let @/ = "\\<<C-r><C-w>\\>"<cr>:set hlsearch<cr>', { noremap = true, silent = true })

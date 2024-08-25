@@ -1,13 +1,15 @@
--- vim.opt.guicursor = ""
+-- vim.opt.guiursor = ""
 
 vim.opt.nu = true
--- vim.o.cmdheight=0
+vim.o.cmdheight=0
 vim.opt.relativenumber = true
 
--- vim.opt.tabstop = 4
--- vim.opt.softtabstop = 4
--- vim.opt.shiftwidth = 4
--- vim.opt.expandtab = false
+vim.opt.cursorline = true
+
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = false
 --
 -- vim.opt.smartindent = true
 
@@ -28,7 +30,7 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 20
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 

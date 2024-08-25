@@ -31,21 +31,11 @@ return require('packer').startup(function(use)
         commit = "08c6417bdc3b29e5f8c53e2cfe4067f288d49a54"
     }
 
-	-- use {
-	-- 	"folke/tokyonight.nvim",
-	-- 	commit = "2969eb4e31c23fc0dc98d8b793df10b598aed762"
-	-- }
-
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
         commit = 'ef267f0c285928ea3a0d3362a260a0728fd4a146'
     }
-
-	-- use {
-	-- 	"dlvandenberg/tree-sitter-angular",
-	-- 	commit = "10f21f3f1b10584e62ecc113ab3cda1196d0ceb8"
-	-- }
 
     use {
         "ThePrimeagen/harpoon",
@@ -203,12 +193,52 @@ return require('packer').startup(function(use)
     }
 
     use {
-        "stefandtw/quickfix-reflector.vim",
-        commit = "6a6a9e28e1713b9e9db99eec1e6672e5666c01b9"
-    }
-
-    use {
-        'nvim-pack/nvim-spectre',
+        "nvim-pack/nvim-spectre",
         commit = "9653847cf2f225648967f6e9363643e327387579"
     }
+
+	use {
+		"tzachar/local-highlight.nvim",
+		commit = "ae3ada3a332128b1036c84c8587b9069891c63da"
+	}
+
+	use {
+		"Mofiqul/vscode.nvim",
+		commit = "3ba16d763097cecc75eb93761f4a981467acfc23"
+	}
+
+	use {
+		"christoomey/vim-tmux-navigator",
+		commit = "5b3c701686fb4e6629c100ed32e827edf8dad01e"
+	}
+
+	use {
+		"AckslD/nvim-neoclip.lua",
+		commit = "709c97fabec9da7d04f7d2f5e207423af8c02871"
+	}
+
+	use {
+		"craftzdog/solarized-osaka.nvim",
+		commit = "126d394c0c979a99206214a2b6b8c86e456c9c0f"
+	}
+
+	use {
+		"epwalsh/obsidian.nvim",
+		commit = "14e0427bef6c55da0d63f9a313fd9941be3a2479"
+	}
+
+	use {
+		"folke/noice.nvim",
+		commit = "448bb9c524a7601035449210838e374a30153172",
+		requires = {
+			{
+				"rcarriga/nvim-notify",
+				commit = "d333b6f167900f6d9d42a59005d82919830626bf"
+			},
+			{
+				"MunifTanjim/nui.nvim",
+				commit = "61574ce6e60c815b0a0c4b5655b8486ba58089a1"
+			}
+		}
+	}
 end)

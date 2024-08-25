@@ -164,7 +164,7 @@ alias gp='git push '
 alias gpl='git pull '
 alias ga='git add '
 alias gaa='git add -A'
-alias gb='git branch --oneline'
+alias gb='git branch'
 alias gc='git commit '
 alias gcm='git commit -m '
 alias gca='git commit --amend'
@@ -174,7 +174,7 @@ alias gob='git checkout -b'
 alias g='git '
 alias gm='git merge '
 alias gpu="git push --set-upstream origin "
-alias gl="git log --oneline"
+alias gl="git log --oneline -n 10"
 
 #python
 alias p3='python3'
@@ -196,3 +196,13 @@ alias v='nvim '
 
 # dotenvx
 alias dx="dotenvx run -- "
+
+# zoxide
+eval "$(zoxide init zsh)"
+alias cd="z"
+
+# eza
+alias ls="eza --icons=always"
+
+# obsidian
+alias "oo"="cd ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault && v ."
