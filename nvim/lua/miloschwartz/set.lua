@@ -1,16 +1,16 @@
--- vim.opt.guiursor = ""
+-- vim.opt.guiursor = ""setset
 
 vim.opt.nu = true
-vim.o.cmdheight=0
+-- vim.o.cmdheight=0
 vim.opt.relativenumber = true
 
-vim.opt.cursorline = true
+-- vim.opt.cursorline = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = false
---
+
 -- vim.opt.smartindent = true
 
 vim.opt.expandtab = false   -- Use tabs instead of spaces
@@ -30,7 +30,7 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 20
+vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
@@ -38,23 +38,23 @@ vim.opt.updatetime = 50
 
 -- vim.opt.colorcolumn = "80"
 
-vim.diagnostic.config({
-  virtual_text = {
-    severity = {
-      min = vim.diagnostic.severity.WARN
-    },
-  },
-  signs = {
-    severity = {
-      min = vim.diagnostic.severity.WARN
-    },
-  },
-  underline = {
-    severity = {
-      min = vim.diagnostic.severity.WARN
-    },
-  },
-  severity_sort = true,
-})
+-- vim.diagnostic.config({
+--   virtual_text = {
+--     severity = {
+--       min = vim.diagnostic.severity.WARN
+--     },
+--   },
+--   signs = {
+--     severity = {
+--       min = vim.diagnostic.severity.WARN
+--     },
+--   },
+--   underline = {
+--     severity = {
+--       min = vim.diagnostic.severity.WARN
+--     },
+--   },
+--   severity_sort = true,
+-- })
 
--- vim.diagnostic.config({ virtual_text = { prefix = '' }})
+vim.diagnostic.config({ virtual_text = { prefix = '' }})

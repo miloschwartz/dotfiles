@@ -1,0 +1,115 @@
+{
+  "window.commandCenter": false,
+"cursor.cpp.disabledLanguages": [
+    "plaintext",
+    "markdown",
+    "scminput"
+],
+  "workbench.layoutControl.enabled": false,
+  "editor.lineNumbers": "relative",
+  "go.toolsManagement.autoUpdate": true,
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<C-c>"],
+      "after": ["<C-d>", "z", "z"]
+    },
+    {
+      "before": ["<C-x>"],
+      "after": ["<C-u>", "z", "z"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
+    },
+    {
+      "before": ["d", "d"],
+      "after": ["\"", "_", "d", "d"]
+    },
+    {
+      "before": ["<BS>"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+    },
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
+    },
+    {
+      "before": ["c", "c"],
+      "after": ["\"", "_", "c", "c"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
+    },
+    {
+      "before": ["<BS>"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+    },
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
+    },
+    {
+      "before": ["c", "c"],
+      "after": ["\"", "_", "c", "c"]
+    }
+  ],
+  "window.zoomLevel": 1,
+  "editor.stickyScroll.enabled": false,
+  "editor.formatOnSave": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.detectIndentation": false,
+  "editor.indentSize": "tabSize",
+  "extensions.ignoreRecommendations": true,
+  "cursor.chat.smoothStreaming": true,
+  "cursor.chat.premiumChatAutoScrollWhenAtBottom": true,
+  "cursor.chat.terminalShowHoverHint": false,
+"workbench.sideBar.location": "right",
+"explorer.compactFolders": false,
+"workbench.preferredLightColorTheme": "Atom One Light",
+"workbench.colorTheme": "Atom One Dark",
+"window.newWindowProfile": "Default",
+"workbench.preferredDarkColorTheme": "Atom One Dark",
+"editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+"window.autoDetectColorScheme": true,
+"editor.letterSpacing": 0.3,
+"editor.lineHeight": 1.5
+}

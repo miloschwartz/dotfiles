@@ -164,15 +164,6 @@ return require('packer').startup(function(use)
     }
 
     use {
-        "nvim-telescope/telescope-file-browser.nvim",
-        commit = "5ee5002373655fd684a4ad0d47a3de876ceacf9a",
-        after = {
-            "telescope.nvim",
-            "plenary.nvim"
-        }
-    }
-
-    use {
         "lewis6991/gitsigns.nvim",
         commit = "d96ef3bbff0bdbc3916a220f5c74a04c4db033f2"
     }
@@ -198,28 +189,8 @@ return require('packer').startup(function(use)
     }
 
 	use {
-		"tzachar/local-highlight.nvim",
-		commit = "ae3ada3a332128b1036c84c8587b9069891c63da"
-	}
-
-	use {
-		"Mofiqul/vscode.nvim",
-		commit = "3ba16d763097cecc75eb93761f4a981467acfc23"
-	}
-
-	use {
 		"christoomey/vim-tmux-navigator",
 		commit = "5b3c701686fb4e6629c100ed32e827edf8dad01e"
-	}
-
-	use {
-		"AckslD/nvim-neoclip.lua",
-		commit = "709c97fabec9da7d04f7d2f5e207423af8c02871"
-	}
-
-	use {
-		"craftzdog/solarized-osaka.nvim",
-		commit = "126d394c0c979a99206214a2b6b8c86e456c9c0f"
 	}
 
 	use {
@@ -228,17 +199,22 @@ return require('packer').startup(function(use)
 	}
 
 	use {
-		"folke/noice.nvim",
-		commit = "448bb9c524a7601035449210838e374a30153172",
-		requires = {
-			{
-				"rcarriga/nvim-notify",
-				commit = "d333b6f167900f6d9d42a59005d82919830626bf"
-			},
-			{
-				"MunifTanjim/nui.nvim",
-				commit = "61574ce6e60c815b0a0c4b5655b8486ba58089a1"
-			}
-		}
+		"onsails/lspkind-nvim",
+		commit = "cff4ae321a91ee3473a92ea1a8c637e3a9510aec"
+	}
+
+	use {
+		"romgrk/barbar.nvim",
+		commit = "31b6951c53a59bccfa91bf3984ed1510a940c836"
+	}
+
+	use {
+		"rose-pine/neovim",
+		commit = "d396005db5bbd1d4ec7772a7c96c96f4c4802328"
+	}
+
+	use {
+		"morhetz/gruvbox",
+		commit = "f1ecde848f0cdba877acb0c740320568252cc482"
 	}
 end)

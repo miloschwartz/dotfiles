@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting macos)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,27 +116,27 @@ source $ZSH/oh-my-zsh.sh
 # export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH
 
 # bun completions
-[ -s "/Users/miloschwartz/.bun/_bun" ] && source "/Users/miloschwartz/.bun/_bun"
+# [ -s "/Users/miloschwartz/.bun/_bun" ] && source "/Users/miloschwartz/.bun/_bun"
 
 # bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
 
 # bindkey -v
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/miloschwartz/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/miloschwartz/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/miloschwartz/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/miloschwartz/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# __conda_setup="$('/Users/miloschwartz/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/Users/miloschwartz/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/Users/miloschwartz/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/Users/miloschwartz/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
 
 fuzzy_cd() {
@@ -202,7 +202,9 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 
 # eza
-alias ls="eza --icons=always"
+# alias ls="eza --icons=always"
 
 # obsidian
 alias "oo"="cd ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault && v ."
+
+export PATH="/Users/miloschwartz/.local/bin:$PATH"

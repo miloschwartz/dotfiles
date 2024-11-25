@@ -9,9 +9,19 @@ vim.keymap.set("n", "<C-x>", "<C-u>zz")
 vim.keymap.set("n", "gd", "gdzz")
 vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
-vim.keymap.set("x", "<leader>p", [["_dP]])
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+-- vim.keymap.set("x", "<leader>p", [["_dP]])
+-- vim.keymap.set({ "n", "v" }, "y", [["+y]])
+
+-- Remap 'y' to copy to the system clipboard
+vim.api.nvim_set_keymap('n', 'y', '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', 'y', '"+y', { noremap = true, silent = true })
+
+-- Remap 'p' to paste from the system clipboard
+vim.api.nvim_set_keymap('n', 'p', '"+p', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', 'p', '"+p', { noremap = true, silent = true })
+
 vim.api.nvim_set_keymap('x', '<leader>x', '"+ygv"_d', { noremap = true, silent = true })
+
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
