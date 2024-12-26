@@ -1,4 +1,4 @@
--- vim.opt.guiursor = ""setset
+-- vim.opt.guicursor = ""
 
 vim.opt.nu = true
 -- vim.o.cmdheight=0

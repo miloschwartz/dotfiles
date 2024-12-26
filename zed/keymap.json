@@ -7,99 +7,129 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 [
-  {
-    "context": "(Workspace || Editor) && vim_mode == normal",
-    "bindings": {
-      "space f f": "file_finder::Toggle",
-      "shift-tab": "pane::ActivatePrevItem",
-      "tab": "pane::ActivateNextItem",
-      "space v r n": "editor::Rename",
-      "space c a": "editor::ToggleCodeActions",
-      "space n f": "editor::Format",
-      "space n t": "project_panel::ToggleFocus",
-      "space o": "project_panel::ToggleFocus",
-    }
-  },
-  {
-    "context": "ProjectPanel && not_editing",
-    "bindings": {
-      "h": "project_panel::CollapseSelectedEntry",
-      "l": "project_panel::ExpandSelectedEntry",
-      "j": "menu::SelectNext",
-      "k": "menu::SelectPrev",
-      "o": "menu::Confirm",
-      "r": "project_panel::Rename",
-      "z c": "project_panel::CollapseSelectedEntry",
-      "z o": "project_panel::ExpandSelectedEntry",
-      "x": "project_panel::Cut",
-      "c": "project_panel::Copy",
-      "p": "project_panel::Paste",
-      "d": "project_panel::Delete",
-      "a": "project_panel::NewFile",
-      "shift-a": "project_panel::NewDirectory",
-      "shift-y": "project_panel::CopyRelativePath",
-      "g y": "project_panel::CopyPath",
-      "space n t": "project_panel::ToggleFocus",
-      "space o": "project_panel::ToggleFocus"
-    }
-  },
-  {
-    "bindings": {
-      "ctrl-k": "menu::SelectPrev",
-      "ctrl-j": "menu::SelectNext"
-    }
-  },
-  {
-    "context": "Editor && showing_completions",
-    "bindings": {
-      "enter": "editor::ConfirmCompletion",
-      "tab": "editor::ComposeCompletion",
-      "ctrl-j": "editor::ContextMenuNext",
-      "ctrl-k": "editor::ContextMenuPrev"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == visual",
-    "bindings": {
-      "shift-k": "editor::MoveLineUp",
-      "shift-j": "editor::MoveLineDown",
-      "shift-h": "editor::Outdent",
-      "shift-l": "editor::Indent"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "cmd-k": "assistant::InlineAssist"
-    }
-  },
-  {
-    "context": "Workspace || Editor",
-    "bindings": {
-      "cmd-l": "workspace::ToggleRightDock"
-    }
-  },
-  {
-    "context": "VimControl && !menu",
-    "use_layout_keys": true,
-    "bindings": {
-      "shift-ctrl-c": "vim::ScrollDown",
-      "shift-ctrl-x": "vim::ScrollUp",
-      "ctrl-c": ["workspace::SendKeystrokes", "shift-ctrl-c z z"],
-      "ctrl-x": ["workspace::SendKeystrokes", "shift-ctrl-x z z"]
-    }
-  },
-  {
-      "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
-      "bindings": {
-        "p": ["workspace::SendKeystrokes", "a cmd-v escape"]
-      }
+    {
+        "context": "(Workspace || Editor) && vim_mode == normal",
+        "bindings": {
+            "space f f": "file_finder::Toggle",
+            "space f p": "projects::OpenRecent",
+            "shift-tab": "pane::ActivatePrevItem",
+            "tab": "pane::ActivateNextItem",
+            "space v r n": "editor::Rename",
+            "space v r r": "editor::FindAllReferences",
+            "space c a": "editor::ToggleCodeActions",
+            "space n f": "editor::Format"
+        }
     },
     {
-      "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
-      "bindings": {
-        "x": "editor::Cut",
-        "d": "editor::Delete"
-      }
-	}
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "h": "project_panel::CollapseSelectedEntry",
+            "l": "project_panel::ExpandSelectedEntry",
+            "j": "menu::SelectNext",
+            "k": "menu::SelectPrev",
+            "o": "menu::Confirm",
+            "r": "project_panel::Rename",
+            "z c": "project_panel::CollapseSelectedEntry",
+            "z o": "project_panel::ExpandSelectedEntry",
+            "x": "project_panel::Cut",
+            "c": "project_panel::Copy",
+            "p": "project_panel::Paste",
+            "d": "project_panel::Delete",
+            "a": "project_panel::NewFile",
+            "shift-a": "project_panel::NewDirectory",
+            "shift-y": "project_panel::CopyRelativePath",
+            "g y": "project_panel::CopyPath",
+            "space o": "project_panel::ToggleFocus",
+            "ctrl-l": "project_panel::ToggleFocus"
+        }
+    },
+    {
+        "bindings": {
+            "ctrl-k": "menu::SelectPrev",
+            "ctrl-j": "menu::SelectNext"
+        }
+    },
+    {
+        "context": "Editor && showing_completions",
+        "bindings": {
+            "enter": "editor::ConfirmCompletion",
+            "tab": "editor::ComposeCompletion",
+            "ctrl-j": "editor::ContextMenuNext",
+            "ctrl-k": "editor::ContextMenuPrev"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == visual",
+        "bindings": {
+            "shift-k": "editor::MoveLineUp",
+            "shift-j": "editor::MoveLineDown",
+            "shift-h": "editor::Outdent",
+            "shift-l": "editor::Indent"
+        }
+    },
+    {
+        "context": "Editor",
+        "bindings": {
+            "cmd-k": "assistant::InlineAssist"
+        }
+    },
+    {
+        "context": "Workspace || Editor",
+        "bindings": {
+            "cmd-l": "workspace::ToggleRightDock"
+        }
+    },
+    {
+        "context": "VimControl && !menu",
+        "use_layout_keys": true,
+        "bindings": {
+            "shift-ctrl-d": "vim::ScrollDown",
+            "shift-ctrl-u": "vim::ScrollUp",
+            "ctrl-c": [
+                "workspace::SendKeystrokes",
+                "shift-ctrl-d z z"
+            ],
+            "ctrl-u": [
+                "workspace::SendKeystrokes",
+                "shift-ctrl-u z z"
+            ]
+        }
+    },
+    {
+        "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+        "bindings": {
+            "p": [
+                "workspace::SendKeystrokes",
+                "a cmd-v escape"
+            ]
+        }
+    },
+    {
+        "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+        "bindings": {
+            "x": "editor::Cut",
+            "d": "editor::Delete"
+        }
+    },
+    {
+        "context": "vim_mode == normal && !menu",
+        "bindings": {
+            "ctrl-h": [
+                "workspace::ActivatePaneInDirection",
+                "Left"
+            ],
+            "ctrl-l": [
+                "workspace::ActivatePaneInDirection",
+                "Right"
+            ],
+            "ctrl-k": [
+                "workspace::ActivatePaneInDirection",
+                "Up"
+            ],
+            "ctrl-j": [
+                "workspace::ActivatePaneInDirection",
+                "Down"
+            ]
+        }
+    }
 ]

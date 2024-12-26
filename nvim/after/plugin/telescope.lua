@@ -8,8 +8,17 @@ tele.setup({
                 ["<C-S-w>"] = require("telescope.actions").send_to_qflist,
                 ["<C-k>"] = require("telescope-live-grep-args.actions").quote_prompt(),
             }
-        }
-    }
+        },
+		file_ignore_patterns = {
+		  "node_modules/",
+		  ".git/"
+		}
+    },
+	pickers = {
+		find_files = {
+			hidden = true
+		}
+	}
 })
 
 tele.load_extension("live_grep_args")

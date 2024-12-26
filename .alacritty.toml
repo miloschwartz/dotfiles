@@ -2,6 +2,7 @@
 # import = [ "~/.config/alacritty/themes/themes/blood_moon.toml" ]
 # import = [ "~/.config/alacritty/themes/themes/hyper.toml" ]
 # import = [ "~/.config/alacritty/themes/themes/rose-pine.toml" ]
+import = [ "~/.config/alacritty/themes/themes/github_dark.toml" ]
 # import = [ "~/.config/alacritty/themes/themes/gruvbox.toml" ]
 
 [env]
@@ -12,39 +13,39 @@ size = 19
 
 [font.normal]
 # family = "JetBrainsMono Nerd Font"
-family = "MesloLGL Nerd Font"
+# family = "MesloLGL Nerd Font"
 # family = "FiraMono Nerd Font"
 # family = "FiraMono Nerd Font"
 # family = "BlexMono Nerd Font Mono"
 # family = "Hack Nerd Font Mono"
 # family = "FiraCode Nerd Font"
-# family = "GeistMono Nerd Font"
+family = "GeistMono Nerd Font"
 
 [font.bold]
 # family = "JetBrainsMono Nerd Font"
-family = "MesloLGL Nerd Font" 
+# family = "MesloLGL Nerd Font" 
 # family = "FiraMono Nerd Font"
 # family = "BlexMono Nerd Font Mono"
 # family = "Hack Nerd Font Mono"
 # family = "FiraCode Nerd Font"
-# family = "GeistMono Nerd Font"
+family = "GeistMono Nerd Font"
 
 [font.italic]
 # family = "JetBrainsMono Nerd Font"
-family = "MesloLGL Nerd Font"
+# family = "MesloLGL Nerd Font"
 # family = "FiraMono Nerd Font"
 # family = "BlexMono Nerd Font Mono"
 # family = "Hack Nerd Font Mono"
 # family = "FiraCode Nerd Font"
-# family = "GeistMono Nerd Font"
+family = "GeistMono Nerd Font"
 
 [window]
 dynamic_title = true
 dynamic_padding = true
 # resize_increments = true
 decorations_theme_variant = "Dark"
-# decorations = "Buttonless"
-decorations = "Full"
+decorations = "Buttonless"
+# decorations = "Full"
 # opacity = 0.95
 # blur = true
 
@@ -52,8 +53,13 @@ decorations = "Full"
 x = 0
 y = 0 
 
-# [colors.primary]
-# background = "#1C1C1C"
+[colors.primary]
+# background = "#000000"
+background = "#0D1117"
+
+[colors.cursor]
+text = "#000000"
+cursor = "#ffffff"
 
 [keyboard]
 bindings = [
@@ -64,3 +70,6 @@ bindings = [
   { key = "Left",  mods = "Command", chars = "\u001BOH", mode = "AppCursor" },
   { key = "Right", mods = "Command", chars = "\u001BOF", mode = "AppCursor" },
 ]
+
+[mouse]
+hide_when_typing = true

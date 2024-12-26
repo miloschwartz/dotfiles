@@ -1,32 +1,32 @@
-require('lualine').setup {
-	options = {
-		theme = "auto",
-		icons_enabled = true,
-		section_separators = '',
-		component_separators = '',
-		-- component_separators = { left = '', right = ''},
-		-- section_separators = { left = '', right = ''},
-	},
-	extensions = { "nvim-tree", "oil" },
-	sections = {
-		lualine_a = {
-			{ 'mode', color = { gui = 'bold' } },
-		},
-		lualine_b = {'branch'},
-		lualine_c = {'filename', {
-			'diff',
-			-- Is it me or the symbol for modified us really weird
-			symbols = { added = ' ', modified = ' ', removed = ' ' },
-		}},
-		lualine_x = {{
-			'diagnostics',
-			sources = { 'nvim_diagnostic' },
-			symbols = { error = ' ', warn = ' ', info = ' ', hint = '󱠂 ' },
-		},'filetype'},
-		lualine_y = {'progress'},
-		lualine_z = {'location'}
-	},
-}
+-- require('lualine').setup {
+-- 	options = {
+-- 		theme = "auto",
+-- 		icons_enabled = true,
+-- 		section_separators = '',
+-- 		component_separators = '',
+-- 		-- component_separators = { left = '', right = ''},
+-- 		-- section_separators = { left = '', right = ''},
+-- 	},
+-- 	extensions = { "nvim-tree", "oil" },
+-- 	sections = {
+-- 		lualine_a = {
+-- 			{ 'mode', color = { gui = 'bold' } },
+-- 		},
+-- 		lualine_b = {'branch'},
+-- 		lualine_c = {'filename', {
+-- 			'diff',
+-- 			-- Is it me or the symbol for modified us really weird
+-- 			symbols = { added = ' ', modified = ' ', removed = ' ' },
+-- 		}},
+-- 		lualine_x = {{
+-- 			'diagnostics',
+-- 			sources = { 'nvim_diagnostic' },
+-- 			symbols = { error = ' ', warn = ' ', info = ' ', hint = '󱠂 ' },
+-- 		},'filetype'},
+-- 		lualine_y = {'progress'},
+-- 		lualine_z = {'location'}
+-- 	},
+-- }
 
 -- local colors = require("solarized-osaka.colors").setup()
 -- local background_color = colors.base03

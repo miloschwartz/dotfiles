@@ -26,12 +26,6 @@ return require('packer').startup(function(use)
     }
 
     use {
-        "catppuccin/nvim",
-        as = "catppuccin",
-        commit = "08c6417bdc3b29e5f8c53e2cfe4067f288d49a54"
-    }
-
-    use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
         commit = 'ef267f0c285928ea3a0d3362a260a0728fd4a146'
@@ -91,14 +85,14 @@ return require('packer').startup(function(use)
         commit = "1e135c5303bc60598f6314a2276f31dc91aa34dd"
     }
 
-    use {
-        'alvan/vim-closetag',
-        commit = "d0a562f8bdb107a50595aefe53b1a690460c3822"
-    }
+    -- use {
+    --     'alvan/vim-closetag',
+    --     commit = "d0a562f8bdb107a50595aefe53b1a690460c3822"
+    -- }
 
     use {
         "windwp/nvim-autopairs",
-        commit = "4f41e5940bc0443fdbe5f995e2a596847215cd2a"
+       commit = "4f41e5940bc0443fdbe5f995e2a596847215cd2a"
     }
 
     use {
@@ -116,16 +110,16 @@ return require('packer').startup(function(use)
         commit = "c6aeb2f1d2538bbdfdaab1664d9d4c3c75aa9db8"
     }
 
-    use {
-        'nvim-tree/nvim-web-devicons',
-        commit = "6e355632387a085f15a66ad68cf681c1d7374a04"
-    }
+    -- use {
+    --     'nvim-tree/nvim-web-devicons',
+    --     commit = "6e355632387a085f15a66ad68cf681c1d7374a04"
+    -- }
 
-    use {
-        'nvim-lualine/lualine.nvim',
-        after = 'nvim-web-devicons',
-        commit = "0a5a66803c7407767b799067986b4dc3036e1983"
-    }
+    -- use {
+    --     'nvim-lualine/lualine.nvim',
+    --     after = 'nvim-web-devicons',
+    --     commit = "0a5a66803c7407767b799067986b4dc3036e1983"
+    -- }
 
     use {
         'unblevable/quick-scope',
@@ -158,19 +152,14 @@ return require('packer').startup(function(use)
         commit = "e462a3446505185adf063566f5007771b69027a1"
     }
 
-    use {
-        'nvim-tree/nvim-tree.lua',
-        commit = "81eb8d519233c105f30dc0a278607e62b20502fd"
-    }
+    -- use {
+    --     'nvim-tree/nvim-tree.lua',
+    --     commit = "81eb8d519233c105f30dc0a278607e62b20502fd"
+    -- }
 
     use {
         "lewis6991/gitsigns.nvim",
         commit = "d96ef3bbff0bdbc3916a220f5c74a04c4db033f2"
-    }
-
-    use {
-        "lukas-reineke/indent-blankline.nvim",
-        commit = "3d08501caef2329aba5121b753e903904088f7e6"
     }
 
     use {
@@ -198,23 +187,23 @@ return require('packer').startup(function(use)
 		commit = "14e0427bef6c55da0d63f9a313fd9941be3a2479"
 	}
 
-	use {
-		"onsails/lspkind-nvim",
-		commit = "cff4ae321a91ee3473a92ea1a8c637e3a9510aec"
-	}
-
-	use {
-		"romgrk/barbar.nvim",
-		commit = "31b6951c53a59bccfa91bf3984ed1510a940c836"
-	}
+	-- use {
+	-- 	"onsails/lspkind-nvim",
+	-- 	commit = "cff4ae321a91ee3473a92ea1a8c637e3a9510aec"
+	-- }
 
 	use {
 		"rose-pine/neovim",
 		commit = "d396005db5bbd1d4ec7772a7c96c96f4c4802328"
 	}
 
-	use {
-		"morhetz/gruvbox",
-		commit = "f1ecde848f0cdba877acb0c740320568252cc482"
-	}
+	use ({
+		"projekt0n/github-nvim-theme",
+		commit = "0e4636f556880d13c00d8a8f686fae8df7c9845f"
+	})
+
+	-- use {
+    --     "lukas-reineke/indent-blankline.nvim",
+    --     commit = "3d08501caef2329aba5121b753e903904088f7e6"
+    -- }
 end)

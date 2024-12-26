@@ -15,7 +15,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -139,6 +140,13 @@ source $ZSH/oh-my-zsh.sh
 # unset __conda_setup
 # <<< conda initialize <<<
 
+# goenv setup
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
+
 fuzzy_cd() {
     local dir
     local git_root
@@ -157,6 +165,8 @@ fuzzy_cd() {
 
 # Alias it for convenience
 alias fcd=fuzzy_cd
+
+alias fts='sh ~/.dotfiles/scripts/tmux-sessionizer.sh'
 
 # git aliases
 alias gs='git status '
@@ -193,6 +203,8 @@ alias n='npm'
 
 # nvim 
 alias v='nvim '
+alias vi='nvim '
+alias vim='nvim '
 
 # dotenvx
 alias dx="dotenvx run -- "

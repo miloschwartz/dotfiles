@@ -84,16 +84,6 @@ _G.packer_plugins = {
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/actions-preview.nvim",
     url = "https://github.com/aznhe21/actions-preview.nvim"
   },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
-  },
-  catppuccin = {
-    loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -104,15 +94,15 @@ _G.packer_plugins = {
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
-  gruvbox = {
-    loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/morhetz/gruvbox"
   },
   harpoon = {
     load_after = {},
@@ -120,11 +110,6 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/opt/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
-  },
-  ["indent-blankline.nvim"] = {
-    loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
-    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -135,18 +120,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
-  },
-  ["lspkind-nvim"] = {
-    loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
-    url = "https://github.com/onsails/lspkind-nvim"
-  },
-  ["lualine.nvim"] = {
-    load_after = {},
-    loaded = true,
-    needs_bufread = false,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -198,11 +171,6 @@ _G.packer_plugins = {
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/nvim-surround",
     url = "https://github.com/kylechui/nvim-surround"
   },
-  ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "https://github.com/nvim-tree/nvim-tree.lua"
-  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -214,11 +182,6 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
-  },
-  ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["obsidian.nvim"] = {
     loaded = true,
@@ -277,11 +240,6 @@ _G.packer_plugins = {
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
-  ["vim-closetag"] = {
-    loaded = true,
-    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/vim-closetag",
-    url = "https://github.com/alvan/vim-closetag"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -297,14 +255,12 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
+vim.cmd [[ packadd telescope-live-grep-args.nvim ]]
 vim.cmd [[ packadd plenary.nvim ]]
+vim.cmd [[ packadd telescope.nvim ]]
 vim.cmd [[ packadd harpoon ]]
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd nvim-treesitter-textobjects ]]
-vim.cmd [[ packadd nvim-web-devicons ]]
-vim.cmd [[ packadd lualine.nvim ]]
-vim.cmd [[ packadd telescope-live-grep-args.nvim ]]
-vim.cmd [[ packadd telescope.nvim ]]
 time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false

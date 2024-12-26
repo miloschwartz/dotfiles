@@ -1,6 +1,19 @@
+require('github-theme').setup({})
+
 -- require('rose-pine').setup({
---     variant = 'auto',
---     -- disable_background = true,
+--     variant = 'rose-pine',
+-- 	dim_inactive_windows = false,
+--     extend_background_behind_borders = false,
+-- 	disable_background = true,
+-- 	disable_float_background = true,
+--     enable = {
+--         terminal = true,
+--         legacy_highlights = true,
+--         migrations = true,
+--     },
+-- 	styles = {
+-- 		italic = false
+-- 	},
 -- })
 
 -- require("catppuccin").setup({
@@ -12,17 +25,6 @@
 --     }
 -- })
 
--- local transparent = false -- set to true if you would like to enable transparency
---
--- local bg = "#011628"
--- local bg_dark = "#011423"
--- local bg_highlight = "#143652"
--- local bg_search = "#0A64AC"
--- local bg_visual = "#275378"
--- local fg = "#CBE0F0"
--- local fg_dark = "#B4D0E9"
--- local fg_gutter = "#627E97"
--- local border = "#547998"
 --
 -- require("tokyonight").setup({
 --   style = "night",
@@ -92,11 +94,12 @@
 -- })
 
 -- setup must be called before loading
-vim.o.termguicolors = true
+-- vim.o.termguicolors = true
 -- vim.cmd.colorscheme "catppuccin"
-vim.cmd.colorscheme "rose-pine"
+-- vim.cmd.colorscheme "rose-pine"
+vim.cmd('colorscheme github_dark_default')
+
 -- vim.cmd.colorscheme "gruvbox"
-vim.opt.pumblend = 0
 -- vim.cmd("colorscheme vscode")
 -- vim.cmd("colorscheme tokyonight")
 -- vim.cmd("colorscheme solarized-osaka")
