@@ -191,7 +191,8 @@ alias p3='python3'
 alias pip='pip3'
 
 #aws
-alias tgp='AWS_PROFILE=tg-prod '
+alias tgpus='AWS_PROFILE=tg-prod-us-east-1 '
+alias tgpca='AWS_PROFILE=tg-prod-ca-central-1 '
 alias tgd='AWS_PROFILE=tg-dev '
 alias tgs='AWS_PROFILE=tg-staging '
 
@@ -220,3 +221,6 @@ alias cd="z"
 alias "oo"="cd ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault && v ."
 
 export PATH="/Users/miloschwartz/.local/bin:$PATH"
+
+# prevent accidental exit
+setopt IGNOREEOF

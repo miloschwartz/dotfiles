@@ -6,17 +6,12 @@ vim.opt.relativenumber = true
 
 -- vim.opt.cursorline = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = false
+-- vim.opt.tabstop = 4
+-- vim.opt.softtabstop = 4
+-- vim.opt.shiftwidth = 4
+-- vim.opt.expandtab = false
 
 -- vim.opt.smartindent = true
-
-vim.opt.expandtab = false   -- Use tabs instead of spaces
-vim.opt.tabstop = 4         -- A tab is shown as 4 spaces width
-vim.opt.shiftwidth = 4      -- Number of spaces to use for each step of (auto)indent
-vim.opt.softtabstop = 4
 
 vim.opt.wrap = false
 

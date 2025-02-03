@@ -1,3 +1,8 @@
 font-family = GeistMono Nerd Font
 font-size = 19
 background = #0D1117
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+theme = vesper
+mouse-hide-while-typing = true

@@ -152,10 +152,10 @@ return require('packer').startup(function(use)
         commit = "e462a3446505185adf063566f5007771b69027a1"
     }
 
-    -- use {
-    --     'nvim-tree/nvim-tree.lua',
-    --     commit = "81eb8d519233c105f30dc0a278607e62b20502fd"
-    -- }
+    use {
+        'nvim-tree/nvim-tree.lua',
+        commit = "81eb8d519233c105f30dc0a278607e62b20502fd"
+    }
 
     use {
         "lewis6991/gitsigns.nvim",
@@ -206,4 +206,9 @@ return require('packer').startup(function(use)
     --     "lukas-reineke/indent-blankline.nvim",
     --     commit = "3d08501caef2329aba5121b753e903904088f7e6"
     -- }
+
+	use {
+		"tpope/vim-sleuth",
+		commit = "be69bff86754b1aa5adcbb527d7fcd1635a84080"
+	}
 end)
