@@ -224,4 +224,3 @@ export PATH="/Users/miloschwartz/.local/bin:$PATH"
 
 # prevent accidental exit
 setopt IGNOREEOF
-bindkey -v

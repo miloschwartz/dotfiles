@@ -52,8 +52,8 @@
       (#offset! @injection.content 0 1 0 -1)
       (#set! injection.language "glimmer")))
 
-((glimmer_template) @injection.content
-  (#set! injection.language "glimmer"))
+; ((glimmer_template) @injection.content
+;   (#set! injection.language "glimmer"))
 
 ; styled.div`<css>`
 (call_expression

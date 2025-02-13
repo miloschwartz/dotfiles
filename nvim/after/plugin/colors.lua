@@ -2,18 +2,18 @@ require('github-theme').setup({})
 
 -- require('rose-pine').setup({
 --     variant = 'rose-pine',
--- 	dim_inactive_windows = false,
+--     dim_inactive_windows = false,
 --     extend_background_behind_borders = false,
--- 	disable_background = true,
--- 	disable_float_background = true,
+--     disable_background = true,
+--     disable_float_background = true,
 --     enable = {
---         terminal = true,
---         legacy_highlights = true,
---         migrations = true,
+-- 	terminal = true,
+-- 	legacy_highlights = true,
+-- 	migrations = true,
 --     },
--- 	styles = {
--- 		italic = false
--- 	},
+--     styles = {
+-- 	italic = false
+--     },
 -- })
 
 -- require("catppuccin").setup({
