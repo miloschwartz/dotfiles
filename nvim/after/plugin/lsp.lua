@@ -17,6 +17,23 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
+	-- ensure_installed = {
+	-- 	"angularls",
+	-- 	"bashls",
+	-- 	"black",
+	-- 	"cmake",
+	-- 	"docker_compose_language_server",
+	-- 	"dockerls",
+	-- 	"eslint",
+	-- 	"goimports",
+	-- 	"golines",
+	-- 	"gopls",
+	-- 	"graphql",
+	-- 	"prettier",
+	-- 	"pyright",
+	-- 	"ts_ls",
+	-- 	"yamlls"
+	-- },
 	handlers = {
 		lsp_zero.default_setup,
 		lua_ls = function()

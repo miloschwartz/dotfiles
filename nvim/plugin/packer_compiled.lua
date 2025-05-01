@@ -265,11 +265,11 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd telescope-live-grep-args.nvim ]]
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd nvim-treesitter-textobjects ]]
 vim.cmd [[ packadd plenary.nvim ]]
 vim.cmd [[ packadd harpoon ]]
+vim.cmd [[ packadd telescope-live-grep-args.nvim ]]
 vim.cmd [[ packadd telescope.nvim ]]
 time([[Sequenced loading]], false)
 

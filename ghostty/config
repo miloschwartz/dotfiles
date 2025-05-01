@@ -1,8 +1,9 @@
-font-family = GeistMono Nerd Font
-font-size = 19
+# font-family = GeistMono Nerd Font
+font-family = Berkeley Mono
+font-size = 20
 background = #0D1117
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
-theme = vesper
+theme = github-dark-dimmed
 mouse-hide-while-typing = true

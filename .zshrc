@@ -15,8 +15,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -114,7 +114,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
-# export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH
 
 # bun completions
 # [ -s "/Users/miloschwartz/.bun/_bun" ] && source "/Users/miloschwartz/.bun/_bun"
@@ -166,12 +165,12 @@ fuzzy_cd() {
 # Alias it for convenience
 alias fcd=fuzzy_cd
 
-alias fts='sh ~/.dotfiles/scripts/tmux-sessionizer.sh'
+alias fts='sh ~/dotfiles/scripts/tmux-sessionizer.sh'
 
 # git aliases
 alias gs='git status '
 alias gp='git push '
-alias gpl='git pull '
+alias gpl='git pull --rebase'
 alias ga='git add '
 alias gaa='git add -A'
 alias gb='git branch'
@@ -214,6 +213,8 @@ alias dx="dotenvx run -- "
 eval "$(zoxide init zsh)"
 alias cd="z"
 
+alias prp="poetry run python"
+
 # eza
 # alias ls="eza --icons=always"
 
@@ -224,3 +225,14 @@ export PATH="/Users/miloschwartz/.local/bin:$PATH"
 
 # prevent accidental exit
 setopt IGNOREEOF
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(pyenv init - bash)"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/miloschwartz/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
