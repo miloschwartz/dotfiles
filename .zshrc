@@ -236,3 +236,5 @@ fpath=(/Users/miloschwartz/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+alias pango='node bin/run'

@@ -105,10 +105,10 @@ return require('packer').startup(function(use)
         -- commit = "2576637ce46aed84240da33496eee6430b0f0248"
     }
 
-    use {
-        "ray-x/lsp_signature.nvim",
-        -- commit = "c6aeb2f1d2538bbdfdaab1664d9d4c3c75aa9db8"
-    }
+    -- use {
+    --     "ray-x/lsp_signature.nvim",
+    --     -- commit = "c6aeb2f1d2538bbdfdaab1664d9d4c3c75aa9db8"
+    -- }
 
     -- use {
     --     'nvim-tree/nvim-web-devicons',
@@ -182,20 +182,20 @@ return require('packer').startup(function(use)
 		-- commit = "5b3c701686fb4e6629c100ed32e827edf8dad01e"
 	}
 
-	use {
-		"epwalsh/obsidian.nvim",
-		-- commit = "14e0427bef6c55da0d63f9a313fd9941be3a2479"
-	}
+	-- use {
+	-- 	"epwalsh/obsidian.nvim",
+	-- 	-- commit = "14e0427bef6c55da0d63f9a313fd9941be3a2479"
+	-- }
 
 	-- use {
 	-- 	"onsails/lspkind-nvim",
 	-- 	commit = "cff4ae321a91ee3473a92ea1a8c637e3a9510aec"
 	-- }
 
-	use {
-		"rose-pine/neovim",
-		-- commit = "d396005db5bbd1d4ec7772a7c96c96f4c4802328"
-	}
+	-- use {
+	-- 	"rose-pine/neovim",
+	-- 	-- commit = "d396005db5bbd1d4ec7772a7c96c96f4c4802328"
+	-- }
 
 	use ({
 		"projekt0n/github-nvim-theme",
