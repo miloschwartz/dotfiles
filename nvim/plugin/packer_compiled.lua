@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/miloschwartz/.cache/nvim/packer_hererocks/2.1.1748459687/share/lua/5.1/?.lua;/Users/miloschwartz/.cache/nvim/packer_hererocks/2.1.1748459687/share/lua/5.1/?/init.lua;/Users/miloschwartz/.cache/nvim/packer_hererocks/2.1.1748459687/lib/luarocks/rocks-5.1/?.lua;/Users/miloschwartz/.cache/nvim/packer_hererocks/2.1.1748459687/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/miloschwartz/.cache/nvim/packer_hererocks/2.1.1748459687/lib/lua/5.1/?.so"
+local package_path_str = "/Users/miloschwartz/.cache/nvim/packer_hererocks/2.1.1762386122/share/lua/5.1/?.lua;/Users/miloschwartz/.cache/nvim/packer_hererocks/2.1.1762386122/share/lua/5.1/?/init.lua;/Users/miloschwartz/.cache/nvim/packer_hererocks/2.1.1762386122/lib/luarocks/rocks-5.1/?.lua;/Users/miloschwartz/.cache/nvim/packer_hererocks/2.1.1762386122/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/miloschwartz/.cache/nvim/packer_hererocks/2.1.1762386122/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -178,6 +178,11 @@ _G.packer_plugins = {
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
+  ["obsidian.nvim"] = {
+    loaded = true,
+    path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
+    url = "https://github.com/epwalsh/obsidian.nvim"
+  },
   ["oil.nvim"] = {
     loaded = true,
     path = "/Users/miloschwartz/.local/share/nvim/site/pack/packer/start/oil.nvim",
@@ -250,9 +255,9 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
+vim.cmd [[ packadd telescope-live-grep-args.nvim ]]
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd nvim-treesitter-textobjects ]]
-vim.cmd [[ packadd telescope-live-grep-args.nvim ]]
 vim.cmd [[ packadd plenary.nvim ]]
 vim.cmd [[ packadd telescope.nvim ]]
 vim.cmd [[ packadd harpoon ]]

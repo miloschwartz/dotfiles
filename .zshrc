@@ -215,6 +215,8 @@ alias cd="z"
 
 alias prp="poetry run python"
 
+alias pangolin="~/fossorial/cli/bin/pangolin"
+
 # eza
 # alias ls="eza --icons=always"
 
@@ -236,5 +238,4 @@ fpath=(/Users/miloschwartz/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
-
-alias pango='node bin/run'
+export PATH="$HOME/.local/bin:$PATH"

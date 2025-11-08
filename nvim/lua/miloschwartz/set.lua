@@ -53,3 +53,32 @@ vim.opt.updatetime = 50
 -- })
 
 vim.diagnostic.config({ virtual_text = { prefix = '' }})
+
+-- Optional: show line numbers
+vim.opt.number = true
+
+-- Disable automatic text wrapping by character count
+vim.opt.textwidth = 0
+vim.opt.wrapmargin = 0
+
+-- Enable line wrapping
+vim.opt.wrap = true
+
+-- Optional: wrap at word boundaries instead of cutting words in half
+vim.opt.linebreak = true
+
+-- Move by displayed (visual) lines when wrapping
+vim.keymap.set("n", "j", "gj", { noremap = true, silent = true })
+vim.keymap.set("n", "k", "gk", { noremap = true, silent = true })
+
+-- Enable spell check in markdown and text files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "text" },
+  callback = function()
+    vim.opt.spell = true
+    vim.opt.spelllang = { "en_us" }
+  end,
+})
+
+
+vim.keymap.set("n", "<leader>sp", "z=", { noremap = true, silent = false })

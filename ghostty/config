@@ -1,9 +1,11 @@
-font-family = GeistMono Nerd Font
+# font-family = GeistMono Nerd Font
 # font-family = Berkeley Mono
+# font-family = Menlo
+font-family = SF Mono Regular
 font-size = 20
 background = #0D1117
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
-theme = github-dark-dimmed
+# theme = github-dark
 mouse-hide-while-typing = true

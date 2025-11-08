@@ -14,6 +14,29 @@ lsp_zero.on_attach(function(client, bufnr)
 	-- lsp_zero.buffer_autoformat()
 end)
 
+local on_attach = function(client, bufnr)
+	local opts = { buffer = bufnr, remap = false }
+	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+	vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+	vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+	vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
+	vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+end
+
+-- Simple root_pattern helper using vim.fs.root (Neovim 0.11+)
+local function root_pattern(...)
+	local patterns = { ... }
+	return function(bufnr, on_dir)
+		for _, pattern in ipairs(patterns) do
+			local root = vim.fs.root(bufnr, pattern)
+			if root then
+				on_dir(root)
+				return
+			end
+		end
+	end
+end
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
@@ -38,17 +61,31 @@ require('mason-lspconfig').setup({
 		lsp_zero.default_setup,
 		lua_ls = function()
 			local lua_opts = lsp_zero.nvim_lua_ls()
-			require('lspconfig').lua_ls.setup(lua_opts)
+			vim.lsp.config('lua_ls', lua_opts)
+		end,
+		gopls = function()
+			vim.lsp.config('gopls', {
+				on_attach = on_attach,
+				capabilities = lsp_zero.default_capabilities(),
+				cmd = { "gopls" },
+				filetypes = { "go", "gomod", "gowork", "gotmpl" },
+				root_dir = root_pattern("go.work", "go.mod", ".git"),
+				settings = {
+					gopls = {
+						completeUnimported = true,
+						usePlaceholders = true,
+					}
+				}
+			})
 		end,
 	}
 })
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
-
--- local on_attach = require('lspconfig').on_attach
--- local capabilities = require('lspconfig').capabilities
--- local lsp_flags = require('lspconfig').flags
+local cmp_nvim_lsp = require "cmp_nvim_lsp"
+local capabilities = cmp_nvim_lsp.default_capabilities()
+local lsp_flags = {}
 
 cmp.setup({
 	sources = {
@@ -69,8 +106,7 @@ cmp.setup({
 	}),
 })
 
-local lspconfig = require('lspconfig')
-lspconfig.yamlls.setup {
+vim.lsp.config('yamlls', {
 	settings = {
 		yaml = {
 			format = {
@@ -101,20 +137,18 @@ lspconfig.yamlls.setup {
 			},
 		},
 	},
-}
+})
 
-local cmp_nvim_lsp = require "cmp_nvim_lsp"
-lspconfig.clangd.setup {
+vim.lsp.config('clangd', {
 	on_attach = on_attach,
 	capabilities = cmp_nvim_lsp.default_capabilities(),
 	cmd = {
 		"clangd",
 		"--offset-encoding=utf-16",
 	},
-}
+})
 
--- local util = lspconfig.util
-lspconfig.pyright.setup {
+vim.lsp.config('pyright', {
 	on_attach = on_attach,
 	capabilities = capabilities,
 	flags = lsp_flags,
@@ -131,7 +165,7 @@ lspconfig.pyright.setup {
 	--     return util.root_pattern(".git", "setup.py", "setup.cfg", "pyproject.toml", "requirements.txt")(fname) or
 	--     util.path.dirname(fname)
 	-- end
-}
+})
 
 -- lsp_zero.set_sign_icons({
 -- 	error = ' ',
@@ -147,21 +181,7 @@ lsp_zero.set_sign_icons({
 	info = ''
 })
 
-lspconfig.gopls.setup {
+vim.lsp.config('eslint', {
 	on_attach = on_attach,
 	capabilities = capabilities,
-	cmd = { "gopls" },
-	filetypes = { "go", "gomod", "gowork", "gotmpl" },
-	root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
-	settings = {
-		gopls = {
-			completeUnimported = true,
-			usePlaceholders = true,
-		}
-	}
-}
-
-lspconfig.eslint.setup {
-	on_attach = on_attach,
-	capabilities = capabilities,
-}
+})

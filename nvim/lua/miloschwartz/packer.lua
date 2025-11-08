@@ -182,10 +182,10 @@ return require('packer').startup(function(use)
 		-- commit = "5b3c701686fb4e6629c100ed32e827edf8dad01e"
 	}
 
-	-- use {
-	-- 	"epwalsh/obsidian.nvim",
-	-- 	-- commit = "14e0427bef6c55da0d63f9a313fd9941be3a2479"
-	-- }
+	use {
+		"epwalsh/obsidian.nvim",
+		-- commit = "14e0427bef6c55da0d63f9a313fd9941be3a2479"
+	}
 
 	-- use {
 	-- 	"onsails/lspkind-nvim",
