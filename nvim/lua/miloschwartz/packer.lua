@@ -127,19 +127,23 @@ return require('packer').startup(function(use)
         "nvim-pack/nvim-spectre"
     }
 
-	use {
-		"christoomey/vim-tmux-navigator"
-	}
+    use {
+        "christoomey/vim-tmux-navigator"
+    }
 
-	use {
-		"epwalsh/obsidian.nvim"
-	}
+    use {
+        "epwalsh/obsidian.nvim"
+    }
 
-	use {
-		"projekt0n/github-nvim-theme"
-	}
+    use {
+        "projekt0n/github-nvim-theme"
+    }
 
-	use {
-		"tpope/vim-sleuth"
-	}
+    use {
+        "tpope/vim-sleuth"
+    }
+
+    use {
+        "arzg/vim-colors-xcode"
+    }
 end)

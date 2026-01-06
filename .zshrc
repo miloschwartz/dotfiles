@@ -215,7 +215,7 @@ alias cd="z"
 
 alias prp="poetry run python"
 
-alias pangolin="~/fossorial/cli/bin/pangolin"
+# alias pangolin="~/fossorial/cli/bin/pangolin"
 
 # eza
 # alias ls="eza --icons=always"

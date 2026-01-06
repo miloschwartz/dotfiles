@@ -1,9 +1,11 @@
 # font-family = GeistMono Nerd Font
 # font-family = Berkeley Mono
 # font-family = Menlo
-font-family = SF Mono Regular
+font-family = SFMono Nerd Font
+font-style = Medium
 font-size = 20
 background = #0D1117
+# background = #292A2F
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
