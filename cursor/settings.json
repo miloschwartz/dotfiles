@@ -1,0 +1,183 @@
+{
+    "window.commandCenter": 1,
+    "editor.lineNumbers": "relative",
+    "extensions.ignoreRecommendations": true,
+    "workbench.colorCustomizations": {},
+    "vim.useSystemClipboard": true,
+    "[mdx]": {
+        "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.navigationControl.enabled": false,
+    "editor.formatOnSave": false,
+    "window.autoDetectColorScheme": false,
+    "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+    "workbench.preferredLightColorTheme": "GitHub Light Default",
+    "editor.fontFamily": "SFMono Nerd Font",
+    "explorer.compactFolders": false,
+    "editor.detectIndentation": false,
+    "editor.indentSize": "tabSize",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<C-c>"
+            ],
+            "after": [
+                "<C-d>",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "<C-x>"
+            ],
+            "after": [
+                "<C-u>",
+                "z",
+                "z"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "D"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "D"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "<BS>"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "c"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "c"
+            ]
+        },
+        {
+            "before": [
+                "C"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "C"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "c"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "c",
+                "c"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "D"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "D"
+            ]
+        },
+        {
+            "before": [
+                "<BS>"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "c"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "c"
+            ]
+        },
+        {
+            "before": [
+                "C"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "C"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "c"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "c",
+                "c"
+            ]
+        }
+    ]
+}
